@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — LocalityIQ Brand Design | TalkXO</title>
+<meta name="description" content="Brand identity case study for LocalityIQ, a proptech startup — a wordmark and mark built around what the product actually does: find a home, and answer every question about it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — LocalityIQ: warm orange + navy, sampled directly from the mark itself */
+    --blue:#ea741c; --blue-ink:#3941b0;
+  }
+  .doc-title .serif{color:var(--blue-ink)}
+  .shot-plain{border-radius:10px;overflow:hidden;box-shadow:var(--shadow-doc);border:1px solid var(--hair-2)}
+  .shot-plain .shot{
+    width:100%;background-size:cover;background-position:center top;
+    -webkit-user-select:none;user-select:none;-webkit-user-drag:none;pointer-events:none;
+  }
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/1013;background-image:url('assets/img/localityiq/l1_logo_dark.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/1013;background-image:url('assets/img/localityiq/l2_logo_light.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/1200;background-image:url('assets/img/localityiq/l3_pillow.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1200/1520;background-image:url('assets/img/localityiq/l4_icons.jpg')}
+  /* shot 04 only: smaller image, caption sits beside it instead of below */
+  .shot-item[data-n="4"]{
+    display:grid;grid-template-columns:min(380px,42%) 1fr;grid-template-areas:"num num" "img cap";
+    gap:10px 36px;align-items:center;
+  }
+  .shot-item[data-n="4"] .shot-num{grid-area:num}
+  .shot-item[data-n="4"] .shot-plain{grid-area:img}
+  .shot-item[data-n="4"] .shot-cap{grid-area:cap;margin-top:0}
+  @media(max-width:640px){
+    .shot-item[data-n="4"]{display:block}
+    .shot-item[data-n="4"] .shot-cap{margin-top:24px}
+  }
+  .shot-item[data-n="5"] .shot{aspect-ratio:1800/1200;background-image:url('assets/img/localityiq/l5_family1.jpg')}
+  .shot-item[data-n="6"] .shot{aspect-ratio:1800/1200;background-image:url('assets/img/localityiq/l6_family2.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-stock-portfolio-app.html"><span class="cm-tag">Product design · Fintech</span><span class="cm-title">A portfolio you can actually read</span></a>
+        <a href="reader-flow-club.html"><span class="cm-tag">Website design · Virtual coworking</span><span class="cm-title">Fight procrastination, bring a crowd</span></a>
+        <a href="reader-core91-vc.html"><span class="cm-tag">Website design · Venture capital</span><span class="cm-title">Say it once, say it sharp</span></a>
+        <a href="reader-city-apartments.html"><span class="cm-tag">Website design · Hospitality</span><span class="cm-title">Prove it, before you pitch it</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+        <a class="cm-cta" href="https://hello.talkxo.com/contact">Start a project</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap">
+    <h1 class="doc-title rv">THE LOGO DOES <span class="serif">three jobs at once.</span></h1>
+    <p class="doc-dek rv d1">LocalityIQ is a proptech startup built on two things: helping people find a home, and answering every question that comes with one. The mark carries both jobs in a single shape — a door for the home search, a question mark for the answers, and a chat-tail for how those answers actually arrive.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>LocalityIQ</dd></div>
+      <div><dt>Category</dt><dd>Brand design</dd></div>
+      <div><dt>Scope</dt><dd>Logo &amp; visual identity</dd></div>
+      <div><dt>Focus</dt><dd>One mark, three meanings</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap">
+    <p class="doc-p" style="max-width:70ch">LocalityIQ helps people find a home and get every question about it answered, in one place. The brief was a mark that could say both without needing a tagline to explain it. Below is that identity, from the wordmark's logic to how it carries into the product's own imagery.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The wordmark</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The "O" is a coordinate, not a letter.</h3>
+          <p>LOCALITY's O is drawn as a plain ring — the same shape a map uses for a pin, or a degree sign uses for a coordinate. A company that sells locations gets to have one built into its own name.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · The mark</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>A door, a question mark, and a chat bubble — at once.</h3>
+          <p>The "iQ" resolves into an open door (a home), while its overall silhouette reads as a question mark and its trailing corner as a chat bubble's tail — the two halves of the product, find and ask, fused into a single shape instead of two separate icons.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · In the world</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Built to survive outside a logo file.</h3>
+          <p>A wordmark this simple has to hold up applied to something physical, not just centred on a slide — here, printed large on a cushion, still legible at a glance from across a room.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · The icon system</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The reassurance, broken into four claims.</h3>
+          <p>Trust, range, financing, guidance — each one gets its own small illustrated icon instead of competing for space in one paragraph, so a nervous first-time buyer can scan the reasons to stay in under five seconds.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="5">
+        <span class="shot-num">05 · Who it's for</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>A family, not a floor plan.</h3>
+          <p>The brand's photography leans on the people who'll live in the home, not renders of the home itself — because the decision LocalityIQ is actually selling into is a family one.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="6">
+        <span class="shot-num">06 · The feeling, not the flat</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The roof gesture says more than a spec sheet.</h3>
+          <p>Hands forming a roof over the family is a more honest pitch for what "finding a home" means to a buyer than another photo of a building's facade would be.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Building a brand that has <span class="serif">to say two things at once?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at whether your mark is doing one job, or the two your product actually needs.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='https://hello.talkxo.com/contact'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="https://hello.talkxo.com/contact">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
