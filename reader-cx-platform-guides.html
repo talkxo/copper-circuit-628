@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — The Guide That Sells Without Selling | TalkXO</title>
+<meta name="description" content="Practitioner-grade gated guides for an AI customer service platform, built to rank for what e-commerce sellers and CX leaders actually search — not another feature page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme — client-selected violet, overriding the default TalkXO blue for this page only */
+  :root{
+    --blue:#5B3FA6;
+    --blue-ink:#3F2B79;
+    --blue-10:rgba(91,63,166,.08);
+    --blue-16:rgba(91,63,166,.16);
+    --shadow-doc-blue:5px 7px 0 rgba(91,63,166,.14);
+  }
+
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .stat-grid.three{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+
+  .formula-box{
+    border:1px solid var(--hair-2);background:var(--paper-2);padding:24px 26px;text-align:center;
+    font-family:var(--mono);font-size:14px;font-weight:700;color:var(--blue-ink);letter-spacing:.02em;
+  }
+  .formula-box .k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);font-weight:500;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-taxfirm-free-tools.html"><span class="cm-tag">Accounting &amp; tax · Content tools</span><span class="cm-title">Built for the search right after the notice</span></a>
+        <a href="reader-ecommerce-content-warehouse.html"><span class="cm-tag">E-commerce · Content &amp; SEO</span><span class="cm-title">Built to outlast the campaign</span></a>
+        <a href="reader-creator-platform-youtube.html"><span class="cm-tag">Creator economy · SaaS</span><span class="cm-title">The leads that never searched</span></a>
+        <a href="reader-hair-clinic-journey.html"><span class="cm-tag">Healthcare · Lifecycle automation</span><span class="cm-title">Still there at month nine</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">THE GUIDE THAT SELLS <span class="serif">without selling.</span></h1>
+    <p class="doc-dek rv d1">An AI customer service platform needed content that would rank for what e-commerce sellers and CX leaders actually search — not another feature page. So the content read like a genuine practitioner resource: real job descriptions, real org-chart phases, a formula for measuring AI performance — mapped to the keywords the SEO strategy was built around, and gated just enough to feed the funnel.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>AI customer service platform</dd></div>
+      <div><dt>Industry</dt><dd>AI customer service · SaaS</dd></div>
+      <div><dt>Audience</dt><dd>E-commerce sellers &amp; CX leaders</dd></div>
+      <div><dt>Approach</dt><dd>Gated guides + SEO content</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Rank for what CX leaders actually search — and be substantial enough that the click <b>becomes a signup.</b></h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-database"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE STATS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid three">
+      <div class="stat">
+        <div class="num"><span data-count="2">0</span></div>
+        <div class="lbl">Flagship gated guides, live and ranking</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="7">0</span></div>
+        <div class="lbl">Chapters mapped to real buyer questions</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="10">0</span></div>
+        <div class="lbl">Actionable steps in the seasonal playbook</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">The product page <span class="serif">can't rank for the question.</span></h2>
+    <p class="doc-lede rv d1">E-commerce sellers and CX leaders don't start their search with "AI customer service platform." They start with the actual decision in front of them.</p>
+    <p class="doc-p rv d2">How do you restructure a support team around an AI agent? What do you even call the new roles? How do you prove to leadership that the thing is working, when the industry-standard metric — containment rate — can't tell a satisfied customer from one who just gave up? How do you get through Black Friday without every channel melting down at once?</p>
+    <p class="doc-p rv d2">A feature page answers none of that. It wasn't going to rank for it, and it wasn't going to earn the trust of someone trying to solve a real operational problem.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Write it like a playbook, <span class="serif">not a pitch.</span></h2>
+    <p class="doc-p rv d1">The people evaluating an AI CX platform are also the people trying to solve a genuine operational problem — restructuring a team, proving ROI to leadership, surviving a seasonal traffic spike. Content that reads like an internal practitioner playbook — real job descriptions, real org charts, a formula for measuring performance instead of a vague claim — earns the kind of trust and search visibility a feature page never could.</p>
+    <p class="doc-p rv d1">And a resource specific to a moment — Black Friday prep, not "customer service tips" in general — captures intent no generic content calendar would ever catch, because it's ranking for exactly what someone is searching for that week.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Two guides, <span class="serif">built like internal playbooks.</span></h2>
+    <p class="doc-p rv d1">Two flagship gated guides were built, each substantial enough to be genuinely useful on its own — the gate is a fair trade, not a paywall on thin content.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="fig-grid rv d2">
+      <div class="fig">
+        <div class="asset-card">
+          <div class="ac-top"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></div>
+          <div class="ac-body">
+            <span class="label k">Flagship guide</span>
+            <h5>The Generative AI Toolkit for Customer Service Leaders</h5>
+            <p>Templates, org-chart phases, and job descriptions for teams shifting to an AI-first support model — including real practitioner interviews from CX teams at recognizable consumer brands.</p>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Gated content, embedded here</b> — not linked out, per the client's guidance</div>
+      </div>
+      <div class="fig">
+        <div class="asset-card">
+          <div class="ac-top"><svg class="icon"><use href="assets/icons.svg#i-calendar"/></svg></div>
+          <div class="ac-body">
+            <span class="label k">Seasonal guide</span>
+            <h5>Black Friday / Cyber Monday Customer Service Checklist</h5>
+            <p>A tactical pre- and post-event playbook for e-commerce CX teams, timed to rank exactly when the audience is searching for it.</p>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Gated content, embedded here</b> — not linked out, per the client's guidance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3" style="margin-top:0">What's inside the toolkit</h3>
+    <p class="doc-p">Seven chapters, each answering a question a CX leader would actually type into Google — not a chapter about the product.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d3" style="margin-top:8px">
+      <span class="tag">AI-first job descriptions</span>
+      <span class="tag">Org-chart transition phases</span>
+      <span class="tag">Preparing for an AI Agent</span>
+      <span class="tag">Automated Resolution &amp; metrics</span>
+      <span class="tag">Benchmarks &amp; reporting</span>
+      <span class="tag">Privacy &amp; security risks</span>
+      <span class="tag">Vendor evaluation questions</span>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:44px">
+    <div class="formula-box rv">
+      <span class="k">A real metric, not a marketing claim</span>
+      Automated Resolution = conversation_volume × AR%
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3" style="margin-top:0">Pre- and post-event, mapped to the calendar</h3>
+    <p class="doc-p">The seasonal checklist splits cleanly into what to do before the traffic spike and what to learn after it.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d3" style="margin-top:8px">
+      <span class="tag">Align seasonal goals</span>
+      <span class="tag">Update knowledge articles</span>
+      <span class="tag">Refresh the AI greeting</span>
+      <span class="tag">Launch proactive campaigns</span>
+      <span class="tag">Manage live wait times</span>
+      <span class="tag">Embed on more pages</span>
+      <span class="tag">Prepare fallback messaging</span>
+      <span class="tag">Refresh post-sale content</span>
+      <span class="tag">Coach revenue retention</span>
+      <span class="tag">Document seasonal learnings</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "A gate on thin content is a wall. A gate on something genuinely useful is a fair trade."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">Assets that answer, <span class="serif">not pages that pitch.</span></h2>
+    <p class="doc-lede rv d1">Two guides live, each built to be found for a real question and to be worth the signup once someone arrives.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">2</div>
+        <div class="rh-sub">Flagship gated guides, live and ranking</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>7 chapters mapped to real buyer questions<span>Job descriptions, org charts, and a metric formula — not a feature list.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>A seasonal guide timed to the calendar<span>Built to rank exactly when Black Friday prep searches spike, not year-round.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Real practitioner proof, not just claims<span>Interviews and org-chart examples from actual CX teams, not hypothetical ones.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">Generic feature pages and abstract AI claims, competing for the same broad terms as every other CX vendor.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Practitioner-grade guides — real roles, real formulas, real seasonal timing — built to rank for how buyers actually search.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Content that reads <span class="serif">like a pitch?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map the real questions your buyers search before they ever think about your category — and what a genuinely useful guide could look like.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-taxfirm-free-tools.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

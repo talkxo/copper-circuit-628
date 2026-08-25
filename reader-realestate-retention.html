@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Real Estate Sentiment Management, Done Right | TalkXO</title>
+<meta name="description" content="A sentiment management system for Gurgaon's leading real estate developer — four owned channels and a resident portal held negative sentiment under 25% across ~20,000 monitored mentions in 90 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — real estate sentiment management: mid-dark green, overriding the default TalkXO blue for this page only */
+    --blue:#2f7a52; --blue-ink:#1f5c3d;
+  }
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  /* ============ SENTIMENT STORM (real-comment cards popping up one at a time, negative meter rising) ============ */
+  .sentiment-storm{
+    display:block;max-width:400px;margin:0;
+  }
+  .ss-meter{margin-bottom:22px}
+  .ss-meter-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .ss-meter-head .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-40)}
+  .ss-meter-head .v{font-family:var(--sans);font-size:13px;font-weight:800;letter-spacing:.01em;color:var(--bad)}
+  .ss-meter-track{height:8px;border-radius:6px;background:var(--hair);overflow:hidden}
+  .ss-meter-fill{height:100%;width:0%;border-radius:6px;background:linear-gradient(90deg,var(--warn),var(--bad));transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
+  .sentiment-storm.in .ss-meter-fill{width:84%}
+  .ss-lane{position:relative;height:96px;overflow:hidden}
+  .sm-comment{
+    position:absolute;left:0;right:0;top:0;display:flex;gap:11px;
+    opacity:0;animation:ss-pop 12s ease-in-out infinite;
+  }
+  .sm-avatar{
+    width:32px;height:32px;border-radius:50%;background:var(--hair);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .sm-avatar .icon{width:15px;height:15px;color:var(--ink-40)}
+  .sm-body{flex:1;min-width:0}
+  .sm-head{display:flex;align-items:baseline;gap:7px;margin-bottom:2px}
+  .sm-head b{font-size:12.5px;font-weight:700;letter-spacing:-.01em}
+  .sm-head span{font-size:10.5px;color:var(--ink-40);font-weight:500}
+  .sm-body p{font-size:13px;line-height:1.5;color:var(--ink);font-weight:500}
+  .sm-actions{margin-top:5px;font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-40);font-weight:700}
+  @keyframes ss-pop{
+    0%{opacity:0;transform:translateY(18px)}
+    4%{opacity:1;transform:translateY(0)}
+    14%{opacity:1;transform:translateY(0)}
+    19%{opacity:0;transform:translateY(-18px)}
+    100%{opacity:0}
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-cx-platform-guides.html"><span class="cm-tag">AI customer service · SaaS</span><span class="cm-title">The guide that sells without selling</span></a>
+        <a href="reader-taxfirm-free-tools.html"><span class="cm-tag">Accounting &amp; tax · Content tools</span><span class="cm-title">Built for the search right after the notice</span></a>
+        <a href="reader-ecommerce-content-warehouse.html"><span class="cm-tag">E-commerce · Content &amp; SEO</span><span class="cm-title">Built to outlast the campaign</span></a>
+        <a href="reader-creator-platform-youtube.html"><span class="cm-tag">Creator economy · SaaS</span><span class="cm-title">The leads that never searched</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">REAL ESTATE SENTIMENT MANAGEMENT, <span class="serif">done right.</span></h1>
+    <p class="doc-dek rv d1">Gurgaon's leading real estate developer had a project running behind schedule, and buyers with nowhere to say so — except social media and public forums. A sentiment management system fixed that: direct channels, real answers from the project's own leadership, and a portal buyers actually wanted to open.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Gurgaon's leading real estate developer</dd></div>
+      <div><dt>Category</dt><dd>Sentiment management</dd></div>
+      <div><dt>Challenge</dt><dd>Project delay, public grievance</dd></div>
+      <div><dt>Result</dt><dd>Negative sentiment held &lt;25%</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Give buyers somewhere real to take a complaint — <b>before</b> it becomes a public one.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-message"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE STATS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num">&lt;25%</div>
+        <div class="lbl">Negative sentiment, held in 90 days</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="35">0</span></div>
+        <div class="lbl">Content pieces delivered every month</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="1">0</span></div>
+        <div class="lbl">Branded resident portal, built from scratch</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="4">0</span></div>
+        <div class="lbl">Direct engagement channels, launched from zero</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">There was no dialogue. <span class="serif">At all.</span></h2>
+    <p class="doc-lede rv d1">The project was running behind schedule — not unusual in residential construction, but genuinely frustrating for buyers waiting to move in. What made it worse wasn't the delay itself. It was the silence around it.</p>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:36px">
+    <div class="sentiment-storm rv d2">
+      <div class="ss-meter">
+        <div class="ss-meter-head"><span class="k">Negative sentiment, unmonitored</span><span class="v">Rising</span></div>
+        <div class="ss-meter-track"><div class="ss-meter-fill"></div></div>
+      </div>
+      <div class="ss-lane">
+        <div class="sm-comment" style="animation-delay:0s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>Flat_402_Owner</b><span>2h</span></div>
+            <p>3 months delay and still no update.</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+        <div class="sm-comment" style="animation-delay:-2s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>Waiting_Since_2022</b><span>4h</span></div>
+            <p>Anyone else still waiting on handover?</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+        <div class="sm-comment" style="animation-delay:-4s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>R.Malhotra</b><span>6h</span></div>
+            <p>Filing a RERA complaint if this continues.</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+        <div class="sm-comment" style="animation-delay:-6s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>PlotOwner_19</b><span>9h</span></div>
+            <p>Radio silence from the builder. Again.</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+        <div class="sm-comment" style="animation-delay:-8s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>Resident2847</b><span>11h</span></div>
+            <p>Is anyone actually reading these comments?</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+        <div class="sm-comment" style="animation-delay:-10s">
+          <div class="sm-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+          <div class="sm-body">
+            <div class="sm-head"><b>A.Sharma</b><span>1d</span></div>
+            <p>No updates since March. Ridiculous.</p>
+            <div class="sm-actions">Like · Reply</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:36px">
+    <p class="doc-p">There was no direct communication and no regular updates to customers. No dialogue at all. Left with nothing official to hold onto, buyers did the only thing left: they took their frustration to social media and public forums — the two places a developer's reputation is hardest to defend and easiest to damage.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Grievance goes public <span class="serif">when it has nowhere else to go.</span></h2>
+    <p class="doc-p rv d1">The delay wasn't really the problem — projects run late. The problem was that a real, valid complaint had no legitimate place to land, so it went to the one place guaranteed to be seen: public. Spin about the schedule wasn't going to fix that. A reason to open the next email, and somewhere to actually be heard 1-1, would.</p>
+    <p class="doc-p rv d1">That meant understanding sentiment properly first — using CRM data to identify the "tribe leaders," the most vocal and most connected buyers, and their specific top issues — instead of guessing at a generic update everyone would ignore the same way.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:8px">
+    <div class="info-grid rv d2">
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-message"/></svg></span>
+        </div>
+        <h4>Address the grievance</h4>
+        <p>Meet the concern about the delay directly, with creative and positive content — not silence, not spin.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-search"/></svg></span>
+        </div>
+        <h4>Understand sentiment</h4>
+        <p>Use CRM data to understand individual sentiment, and identify the tribe leaders and their top issues first.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span>
+        </div>
+        <h4>Engage and personalise</h4>
+        <p>Create top-of-mind engagement, personalise the experience with the brand, and turn sentiment positive.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></span>
+        </div>
+        <h4>Create a 1-1 channel</h4>
+        <p>Give every buyer a direct line, so public grievance becomes negligible by design, not by luck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Four channels, <span class="serif">where there used to be zero.</span></h2>
+    <p class="doc-p rv d1">A full engagement system was built across four channels — not limited to the delay as the only topic, and not a one-off campaign.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-mail"/></svg></span>
+          <div><b>Email &amp; SMS updates</b><span>Construction &amp; neighbourhood news</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Construction photos &amp; micro-updates</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">New malls, shops &amp; local events</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Partner &amp; brand endorsements</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></span>
+          <div><b>Surveys &amp; AMAs</b><span>Two-way, not broadcast-only</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Lifestyle &amp; interior-design surveys</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Virtual site visits, with influencers</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Live Q&amp;A with the project head</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span>
+          <div><b>Contests &amp; micro-wins</b><span>Monthly, not one-off</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Branded merchandise &amp; lucky draws</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Run with a partner influencer</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Customers share their own videos</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+          <div><b>One-click access portal</b><span>Everything else, in one place</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Live construction updates</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Direct helpline &amp; chat</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Design library &amp; move-in guides</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:52px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">A portal built to be checked, not just tolerated</h3>
+    <p class="fig-desc">A mobile-first microsite: live updates, a direct helpline, a design resource library, curated moving-home articles, a weekly note from the project director, and a contests area — all under one roof.</p>
+    <div class="fig-grid cols-1 rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">resident portal — live updates</div></div>
+          <div class="screen">
+            <div class="mockup-dash">
+              <div class="sb">
+                <div class="brand">Resident portal</div>
+                <div class="item on">Live updates</div>
+                <div class="item">Chat &amp; helpline</div>
+                <div class="item">Design library</div>
+                <div class="item">Articles</div>
+                <div class="item">Contests</div>
+              </div>
+              <div class="main">
+                <div class="topbar"><h4>This week's update</h4><span class="badge good"><i></i>On track</span></div>
+                <div class="stat-grid" style="border:none;grid-template-columns:repeat(3,1fr)">
+                  <div class="stat" style="padding:12px 4px"><div class="num" style="font-size:22px">4th</div><div class="lbl">Floor slab cast this week</div></div>
+                  <div class="stat" style="padding:12px 4px"><div class="num" style="font-size:22px">62%</div><div class="lbl">Structure complete</div></div>
+                  <div class="stat" style="padding:12px 4px"><div class="num" style="font-size:22px">Fri</div><div class="lbl">Next site-visit slot</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Purpose:</b> give grievance a private, direct line — before it becomes public</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "Micro-glam and micro-victory moments keep buyers engaged and feeling valued — while quietly giving every complaint a 1-1 line instead of a public one."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">Negative sentiment, <span class="serif">held under a quarter.</span></h2>
+    <p class="doc-lede rv d1">Across roughly 20,000 monitored queries, reviews, and posts, negative sentiment was held under 25% within 90 days.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">&lt;25%</div>
+        <div class="rh-sub">Negative sentiment, across ~20,000 mentions, in 90 days</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>4 direct channels, launched from zero<span>35 pieces of content delivered monthly across email, SMS, social, seeded reviews, and video.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Tribe leaders identified and engaged first<span>The most vocal, most connected buyers heard directly, before sentiment could spread unmanaged.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>A portal that replaces public grievance with a private one<span>Live updates, a helpline, and a design library gave buyers a reason to open it, not just tolerate it.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">No direct communication, no regular updates. Negative sentiment moving straight to public platforms. No dialogue at all.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Four owned channels, a monthly content system, and a portal built to be opened — with grievance routed privately, by design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Grievance heading <span class="serif">straight to social media?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map where your buyers or customers have nowhere real to be heard — and what a private, owned channel could look like instead.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-cx-platform-guides.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

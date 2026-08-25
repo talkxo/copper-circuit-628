@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — 5X Organic Traffic by Ranking Trade by Trade | TalkXO</title>
+<meta name="description" content="A field service management platform was fighting one crowded keyword: field service management software. Mapping 43 trades against their own search behaviour instead grew organic traffic 5X and put 5–10 keywords on page 1, consistently.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme — client-selected crimson + black, overriding the default TalkXO blue for this page only */
+  :root{
+    --blue:#C81E3A;
+    --blue-ink:#9E1730;
+    --blue-10:rgba(200,30,58,.08);
+    --blue-16:rgba(200,30,58,.16);
+    --shadow-doc-blue:5px 7px 0 rgba(200,30,58,.14);
+  }
+
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .stat-grid .num.txt{font-size:clamp(30px,4vw,44px)}
+
+  .kw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair);margin-top:32px}
+  .kw-card{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:20px 18px}
+  .kw-card .kw-vol{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-ink);margin-bottom:8px}
+  .kw-card .kw-term{font-size:14.5px;font-weight:700;letter-spacing:-.01em}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-takara-biotech-crm.html"><span class="cm-tag">Biotech · CRM &amp; demand gen</span><span class="cm-title">A CRM funnel built for a biotech leader</span></a>
+        <a href="reader-touchpoints-ev.html"><span class="cm-tag">EV &amp; mobility</span><span class="cm-title">The follow-up that closes the sale</span></a>
+        <a href="reader-abm-video-ai.html"><span class="cm-tag">Enterprise AI · sports media</span><span class="cm-title">Your audience is out there</span></a>
+        <a href="reader-d2c-supplements.html"><span class="cm-tag">Performance marketing · D2C</span><span class="cm-title">D2C multivitamins, search ads multi-gains</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">FOUND BY TRADE, <span class="serif">not by category.</span></h1>
+    <p class="doc-dek rv d1">A field service management platform was fighting one brutally crowded keyword: "field service management software." The real opportunity was 43 separate trades, each searching for help in their own words — so the strategy stopped competing for one term and started owning dozens.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Field service management platform</dd></div>
+      <div><dt>Industry</dt><dd>B2B SaaS</dd></div>
+      <div><dt>Approach</dt><dd>Vertical SEO + funnel</dd></div>
+      <div><dt>Result</dt><dd>5X organic traffic</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Stop competing for one generic term, and become the <b>obvious answer</b> for every trade that already searches for this kind of software.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-search"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="5" data-suffix="X">0X</span></div>
+        <div class="lbl">Organic traffic increase</div>
+      </div>
+      <div class="stat">
+        <div class="num txt">5–10</div>
+        <div class="lbl">Keywords holding page 1, consistently</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="43">0</span></div>
+        <div class="lbl">Trade verticals mapped &amp; targeted</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="60">0</span></div>
+        <div class="lbl">Product capability angles per trade</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">One term. <span class="serif">Everyone fighting for it.</span></h2>
+    <p class="doc-lede rv d1">The platform's core page was built to rank for "field service management software" — the obvious category term, and the most contested one in the space.</p>
+    <p class="doc-p rv d2">It's a page ServiceNow, Salesforce, Zoho, and every other enterprise platform is also fighting for, with content budgets a growing SaaS company can't match. Worse, the term itself is a modest pool — a few hundred searches a month, shared across every competitor category-wide. The platform was spending real effort to rank for a term that, even at position one, wouldn't move much traffic.</p>
+    <p class="doc-p rv d2">Meanwhile, the actual buyers — HVAC contractors, RO repair technicians, lift and escalator maintenance firms, pest control operators — weren't searching "field service management software" at all. They were searching in their own trade's language, in pools many times larger.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Forty-three markets, <span class="serif">not one.</span></h2>
+    <p class="doc-p rv d1">The addressable market was never a single audience searching a single term — it was dozens of distinct trades, each with its own vocabulary, its own competitors, and search volume the generic category term couldn't touch. A plumber doesn't type "field service management." They type "plumbing service software," or don't search for software at all — they search for "ac repair" or "ac service," the job itself, and expect software to be part of what shows up.</p>
+    <p class="doc-p rv d1">Ranking generically would always lose to category giants with bigger budgets. Ranking as the specific, obvious answer for one trade at a time was winnable — and every trade the platform actually served was a keyword pool the enterprise players weren't bothering to fight for.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="kw-grid rv d2">
+      <div class="kw-card"><div class="kw-vol">~17,000 / mo</div><div class="kw-term">"ac service"</div></div>
+      <div class="kw-card"><div class="kw-vol">~15,700 / mo</div><div class="kw-term">"ac repair"</div></div>
+      <div class="kw-card"><div class="kw-vol">~5,100 / mo</div><div class="kw-term">"ac installation"</div></div>
+      <div class="kw-card"><div class="kw-vol">~720 / mo</div><div class="kw-term">"field service management software"</div></div>
+    </div>
+    <p class="doc-note rv d3" style="margin-top:14px">A sample from the research: the category term the platform was fighting for sits at the bottom of its own keyword pool.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">A page for every trade, <span class="serif">a funnel behind each one.</span></h2>
+    <p class="doc-p rv d1">Every serviceable trade — 43 in total, from HVAC to pest control to lift maintenance — was mapped against 60 product-capability angles: real-time tracking, job scheduling, AMC management, invoicing, attendance, and more. That matrix pointed to where real search volume and real product fit actually overlapped, instead of guessing.</p>
+    <p class="doc-p rv d1">Instead of one core page fighting for one generic term, the team built a dedicated landing page for every trade — written in that trade's own language, targeting that trade's own keyword cluster, and funnelling into the same product from a dozen different front doors instead of one crowded one.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:48px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">One category page becomes a library of trade pages</h3>
+    <p class="fig-desc">Each card below is its own landing page, its own keyword target, its own entry point into the funnel.</p>
+    <div class="fig-grid cols-1 rv d2">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">platform — service industries</div></div>
+          <div class="screen">
+            <div class="vertical-grid">
+              <div class="vg-cards">
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-settings"/></svg></span>
+                  <h5>HVAC</h5>
+                  <p>Scheduling, inventory &amp; AMC for HVAC teams</p>
+                  <a>HVAC Software →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-database"/></svg></span>
+                  <h5>RO Repair</h5>
+                  <p>Maintenance &amp; scheduling for water purifiers</p>
+                  <a>RO Software →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-layers"/></svg></span>
+                  <h5>Lift &amp; Escalators</h5>
+                  <p>AMC &amp; compliance for vertical transport</p>
+                  <a>Lift Software →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></span>
+                  <h5>Plumbing</h5>
+                  <p>Dispatch &amp; job management for plumbers</p>
+                  <a>Plumbing Software →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></span>
+                  <h5>CCTV</h5>
+                  <p>Client &amp; service management for installers</p>
+                  <a>CCTV Software →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></span>
+                  <h5>Pest Control</h5>
+                  <p>Scheduling &amp; reporting for operators</p>
+                  <a>Pest Control →</a>
+                </div>
+              </div>
+              <div class="vg-pager">
+                <span>Prev</span><span class="on">1</span><span>2</span><span>3</span><span>4</span><span>Next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Live today:</b> dozens of trade pages, across multiple pages of results</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "The product didn't change. The number of front doors into it did."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">More doors, <span class="serif">more traffic through them.</span></h2>
+    <p class="doc-lede rv d1">Ranking as forty-three specific answers beat fighting for one generic one.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">5X</div>
+        <div class="rh-sub">Organic traffic increase</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>5–10 keywords on page 1, consistently<span>Held, not a one-time spike — across the trades with the strongest page-to-search fit.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>43 trades mapped, dozens live<span>A repeatable structure — new trades can be added the same way, on demand.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Every page funnels to the same product<span>More entry points into one funnel, not a fragmented one per trade.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">One category page, fighting enterprise platforms for a few hundred monthly searches shared across everyone.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">A dedicated page per trade, each targeting a keyword pool many times larger — and funnelling into the same product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Ranking for one term <span class="serif">that's fighting you back?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map the specific-market keyword pools your category term is hiding from you — yours to keep either way.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-takara-biotech-crm.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

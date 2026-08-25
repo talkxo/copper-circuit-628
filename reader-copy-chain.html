@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Copy Chain Product Design | TalkXO</title>
+<meta name="description" content="Product design case study for Copy Chain, TalkXO's own AI copywriting canvas — built first for internal use, then made public. Every draft is a node on a branching canvas, not a message in a chat thread.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme — Copy Chain: keeps default TalkXO blue, this is TalkXO's own product */
+  .shot-item[data-n="1"] .shot{aspect-ratio:2200/1192;background-image:url('assets/img/copychain/cc1_light_full.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:2200/1192;background-image:url('assets/img/copychain/cc2_dark_full.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/878; background-image:url('assets/img/copychain/cc3_step1.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1800/979; background-image:url('assets/img/copychain/cc4_step6.jpg')}
+  .cta-sub a{color:var(--blue-ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  .cta-sub a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-stock-portfolio-app.html"><span class="cm-tag">Product design · Fintech</span><span class="cm-title">A portfolio you can actually read</span></a>
+        <a href="reader-frex-challenge.html"><span class="cm-tag">Website design · Education · Space science</span><span class="cm-title">A call for research, staged like a launch</span></a>
+        <a href="reader-flow-club.html"><span class="cm-tag">Website design · Virtual coworking</span><span class="cm-title">Fight procrastination, bring a crowd</span></a>
+        <a href="reader-core91-vc.html"><span class="cm-tag">Website design · Venture capital</span><span class="cm-title">Say it once, say it sharp</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">COPYWRITING, MAPPED <span class="serif">not chatted.</span></h1>
+    <p class="doc-dek rv d1">Every AI copywriting tool defaults to the same interface: a chat box, one linear thread, each new draft overwriting the last. Copy Chain does the opposite — every generation is a node on a canvas, every tone and length variation branches off it, and nothing gets lost when you want to go back and try a different direction. Built first for TalkXO's own team, then opened up for other copywriters and marketers.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Product</dt><dd>Copy Chain, by TalkXO</dd></div>
+      <div><dt>Category</dt><dd>Product design</dd></div>
+      <div><dt>Scope</dt><dd>Interactive canvas UI</dd></div>
+      <div><dt>Focus</dt><dd>Branching, not chatting</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">Copy Chain started as an internal tool — a way for TalkXO's own writers to stop losing good drafts to a chat window's undo history. A brief goes in as Step 1; every regeneration becomes a new node, tagged by tone and length; every option sits side by side instead of replacing the one before it. It's since been made available publicly. Below is the canvas itself, in both its light and dark states, with the thinking behind how it works.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The canvas, light mode</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Copy Chain</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The whole draft history, still visible.</h3>
+          <p>Nothing here gets overwritten. Every regeneration is a new node branching off the one before it, so the third attempt sits next to the first instead of erasing it — a visual paper trail a chat window can't give you.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · The canvas, dark mode</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Copy Chain</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Built to live in, not just visit.</h3>
+          <p>A full dark mode, not an inverted colour filter — for a tool meant to stay open through a long writing session, not a one-off prompt-and-leave.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · The brief, branching</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Copy Chain</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>One brief, several directions at once.</h3>
+          <p>A single starting brief branches into named tone variants — Punchy, Witty, Empathetic — each one a clearly labelled path on the canvas, not a dropdown you have to remember you changed.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · The controls, on the node</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Copy Chain</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The controls sit on the node, not in a sidebar.</h3>
+          <p>Tone and length adjustments live directly on the card you're editing — Professional, Casual, Witty, Punchy, Empathetic; Shorter, Same, Longer — and generate straight into new branches, so refining a line never means leaving the canvas to find the setting.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Try the canvas <span class="serif">yourself.</span></h2>
+      <p class="cta-sub" style="max-width:520px">Copy Chain is live — <a href="https://hello.talkxo.com/ai/copychain-canvas" target="_blank" rel="noopener">open the canvas and run your own brief through it →</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

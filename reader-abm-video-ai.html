@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Turning Cold Pipeline Into Warm Demos | TalkXO</title>
+<meta name="description" content="How a segmented ABM drip architecture across two lead tracks, built on deep audience research, lifted demo bookings by 38% and turned passive downloads into qualified pipeline for an enterprise AI company in sports media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* page-specific: audience cards, asset cards, tracks, hero objective panel */
+  .audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair)}
+  .audience{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:26px 22px}
+  .audience-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .audience-head .ic{width:36px;height:36px;border-radius:50%;background:var(--blue-10);color:var(--blue-ink);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .audience-head .ic .icon{width:17px;height:17px}
+  .audience h4{font-size:16.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+  .audience p{font-size:13.5px;line-height:1.65;color:var(--ink-60);font-weight:500}
+
+  .asset-card{background:#fff;padding:0}
+  .asset-card .ac-top{aspect-ratio:16/10;background:linear-gradient(135deg,var(--blue-10),var(--paper-2));display:flex;align-items:center;justify-content:center}
+  .asset-card .ac-top .icon{width:34px;height:34px;color:var(--blue-ink)}
+  .asset-card .ac-body{padding:16px 18px}
+  .asset-card .ac-body .k{margin-bottom:8px}
+  .asset-card .ac-body h5{font-size:14px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+  .asset-card .ac-body p{font-size:12.5px;line-height:1.6;color:var(--ink-60);font-weight:500}
+
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-d2c-supplements.html"><span class="cm-tag">Performance marketing · D2C</span><span class="cm-title">D2C multivitamins, search ads multi-gains</span></a>
+        <a href="reader-travel-performance-marketing.html"><span class="cm-tag">Performance marketing · Travel</span><span class="cm-title">Sell the family, not the traveller</span></a>
+        <a href="reader-realestate-retention.html"><span class="cm-tag">Sentiment management · Real estate</span><span class="cm-title">Real estate sentiment management, done right</span></a>
+        <a href="reader-cx-platform-guides.html"><span class="cm-tag">AI customer service · SaaS</span><span class="cm-title">The guide that sells without selling</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">YOUR AUDIENCE IS OUT THERE. <span class="serif">They just haven't stopped for you yet.</span></h1>
+    <p class="doc-dek rv d1">An enterprise AI company had strong inbound interest and a warm addressable market — but deals kept stalling after one demo. A segmented ABM drip architecture, built on deep research into three very different buyers, turned pipeline that wasn't moving into pipeline that was.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Enterprise AI · sports media</dd></div>
+      <div><dt>Channels</dt><dd>Email · newsletter · LinkedIn ads</dd></div>
+      <div><dt>Lead tracks</dt><dd>2, with 8 branching journeys</dd></div>
+      <div><dt>Time to result</dt><dd>1 quarter</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Turn a warm, credible market into <b>booked demos</b> — with content specific enough to prove the product understands their world.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="38" data-suffix="%">0%</span></div>
+        <div class="lbl">More activity from cold responses</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="12" data-suffix="%">0%</span></div>
+        <div class="lbl">Passive leads reaching demo request</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="8">0</span></div>
+        <div class="lbl">Branching lead journeys built</div>
+      </div>
+      <div class="stat">
+        <div class="num">↑<span data-count="300" data-suffix="%">0%</span></div>
+        <div class="lbl">Funnel-mapped content assets</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">Pipeline was building. <span class="serif">It wasn't moving.</span></h2>
+    <p class="doc-lede rv d1">A genuinely differentiated product, and a warm addressable market — broadcasters, sports federations, media rights holders already feeling the pressure to do more with their content libraries.</p>
+    <p class="doc-p rv d2">But despite strong inbound interest, deals were stalling. Prospects would engage once — download something, attend a demo — then drift. The sales cycle was long, the buying committee was wide, and there was no structured content system keeping the brand present and credible throughout.</p>
+    <p class="doc-p rv d2">The team had <b>leads</b>. They didn't have <b>momentum</b>.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Same message, <span class="serif">different temperatures.</span></h2>
+    <p class="doc-p rv d1">The core issue wasn't awareness, or even intent. Different leads were arriving at different temperatures, with different context — and all being handled the same way. Someone who'd just raised their hand through a paid LinkedIn ad needed a different conversation than someone who'd already sat through a demo but hadn't booked a follow-up.</p>
+    <p class="doc-p rv d1">The second issue was content specificity. Enterprise buyers in sports media don't respond to generic AI narratives — they respond to proof the product understands <i>their</i> world. That meant going deeper than "sports media" as a category, into research on what each buyer inside it actually loses sleep over.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:38px">
+    <div class="audience-grid rv d2">
+      <div class="audience">
+        <div class="audience-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></span>
+          <span class="tag">Broadcasters</span>
+        </div>
+        <h4>What does this mean for football, specifically?</h4>
+        <p>Generic "AI for media" doesn't land. A football broadcaster wants to know what it means for football content revenue — named, not implied.</p>
+      </div>
+      <div class="audience">
+        <div class="audience-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-database"/></svg></span>
+          <span class="tag">Sports federations</span>
+        </div>
+        <h4>Thirty years of footage, sitting idle</h4>
+        <p>Federations are archive-rich and monetisation-poor. The proof point that lands: a dormant archive turned into a searchable, licensable library.</p>
+      </div>
+      <div class="audience">
+        <div class="audience-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></span>
+          <span class="tag">Media rights holders</span>
+        </div>
+        <h4>Moderation at a scale no team can staff</h4>
+        <p>Rights holders managing user-generated and archival footage care about moderation accuracy and speed above almost anything else.</p>
+      </div>
+    </div>
+    <p class="doc-note rv d3" style="margin-top:18px">Three buyers inside one category, each needing their own proof. So the plan became: split active, MQL-qualified leads from passive, content-driven ones — and give each a segmented journey that branches on real engagement signals.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Two tracks, <span class="serif">eight branches.</span></h2>
+    <p class="doc-p rv d1">A full multichannel ABM drip architecture was built across two lead tracks — every email, ad, and newsletter touch written with one specific job: introduce a use case, overcome an objection, or move the reader one step closer to a conversation.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="track-grid rv d1">
+      <div class="track">
+        <span class="badge good"><i></i>Active MQL</span>
+        <h4>Arriving through demo ads or direct outreach</h4>
+        <p>A high-intent sequence focused on getting a demo scheduled, with branches handling non-responses and re-engagement through capability-led emails.</p>
+      </div>
+      <div class="track">
+        <span class="badge warn"><i></i>Passive lead</span>
+        <h4>Arriving through gated case studies &amp; the newsletter</h4>
+        <p>A longer awareness-to-consideration arc, content mapped to their vertical, CTAs calibrated to their stage — until they were ready for the first track.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:44px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+          <div><b>Active MQL</b><span>Demo ad or outreach reply</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Book-demo email</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">No response → capability email</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Demo scheduled</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-database"/></svg></span>
+          <div><b>Passive lead</b><span>Downloaded a gated asset</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Vertical-specific case study</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Engaged → moves to Active MQL</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Inactive → monthly newsletter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- content: LinkedIn ads, tailored per vertical -->
+  <div class="wrap" style="margin-top:56px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">Specific enough to feel written for them</h3>
+    <p class="fig-desc">Every ad framed around the reader's own vertical — never a generic "AI for media" line.</p>
+    <div class="fig-grid rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">linkedin.com/feed</div></div>
+          <div class="screen">
+            <div class="mockup-social">
+              <div class="so-head"><span class="av"></span><div><b>Sports Media AI Platform</b><span>Promoted</span></div></div>
+              <div class="so-body">What does AI mean for football content revenue — specifically? A look at how broadcasters are re-monetising archive footage.</div>
+              <div class="so-media"><svg class="icon" style="width:26px;height:26px"><use href="assets/icons.svg#i-workflow"/></svg></div>
+              <div class="so-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><span class="tag" style="margin-bottom:0">Broadcasters</span></div>
+      </div>
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">linkedin.com/feed</div></div>
+          <div class="screen">
+            <div class="mockup-social">
+              <div class="so-head"><span class="av"></span><div><b>Sports Media AI Platform</b><span>Promoted</span></div></div>
+              <div class="so-body">Thirty years of match footage. Zero of it searchable. Here's how one federation made its entire archive licensable in six weeks.</div>
+              <div class="so-media"><svg class="icon" style="width:26px;height:26px"><use href="assets/icons.svg#i-database"/></svg></div>
+              <div class="so-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><span class="tag" style="margin-bottom:0">Sports federations</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- content: gated assets -->
+  <div class="wrap" style="margin-top:52px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">The mid-funnel anchor</h3>
+    <p class="fig-desc">Vertical-specific case studies, positioned as the natural next step after the ad — never a generic whitepaper.</p>
+    <div class="fig-grid rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">resources — case study</div></div>
+          <div class="screen">
+            <div class="asset-card">
+              <div class="ac-top"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></div>
+              <div class="ac-body">
+                <span class="label k">Case study · Football</span>
+                <h5>Re-monetising 30 years of archive footage with AI tagging</h5>
+                <p>How one federation turned a dormant archive into a searchable, licensable content library.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Routes to:</b> Active MQL track on engagement</div>
+      </div>
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">resources — datasheet</div></div>
+          <div class="screen">
+            <div class="asset-card">
+              <div class="ac-top"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></div>
+              <div class="ac-body">
+                <span class="label k">Datasheet · Moderation</span>
+                <h5>Moderating user-generated sports footage at platform scale</h5>
+                <p>Accuracy and turnaround benchmarks for rights holders fielding thousands of clips a week.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Routes to:</b> Active MQL track on engagement</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- content: newsletter / re-engagement email -->
+  <div class="wrap" style="margin-top:52px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">The long game: a newsletter that earns its open rate</h3>
+    <p class="fig-desc">Leads who go quiet don't get dropped — they get folded into a monthly sports-media-AI newsletter until a new signal brings them back into an active track.</p>
+    <div class="fig-grid cols-1 rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">inbox — 1 new message</div></div>
+          <div class="screen">
+            <div class="mockup-email">
+              <div class="em-head">
+                <div class="em-from"><span class="av">SM</span><div><b>Sports Media AI · Monthly</b><span>What broadcasters shipped with AI this month</span></div></div>
+                <span class="em-when">Monthly</span>
+              </div>
+              <div class="em-subject">3 archives went searchable this month — here's how</div>
+              <div class="em-body">
+                <p>Hi Kabir — you downloaded our football case study a while back. No pitch here, just what's actually shipping across sports media right now, and one thing worth 5 minutes if you're still curious.</p>
+                <a class="em-cta">Read this month's issue →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Purpose:</b> stay credible and present, at no cost to sales' time</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      “Sales conversations improved in quality too — prospects arrived better informed, and more specific in their questions.”
+      <cite>Quarter-one review</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">A funnel that finally <span class="serif">tells you why.</span></h2>
+    <p class="doc-lede rv d1">Within the first quarter, the same warm market started converting — because it was finally being spoken to as three different audiences, not one.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">↑38%</div>
+        <div class="rh-sub">More demo bookings from nurtured leads</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>12% of passive leads reach a demo request<span>Within 30 days of entering the nurture track — previously a dead end.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>8 branching journeys, live<span>Across two tracks, each routing on real engagement signal, not a guess.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Sales sees the drop-off, for the first time<span>A feedback loop that keeps improving conversion past the initial build.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">One-time downloads that went nowhere. Active and passive leads treated identically. No visibility into drop-off.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Two branching tracks, eight journeys, content mapped to vertical and funnel stage. Every drop-off point visible and actionable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Leads stalling <span class="serif">after one touch?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map your funnel's drop-off points and what a segmented journey could look like — yours to keep either way.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-touchpoints-ev.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

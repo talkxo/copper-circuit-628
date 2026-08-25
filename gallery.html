@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | TalkXO</title>
+  <meta name="description"
+    content="TalkXO gallery — website and product design work, broken down section by section: what we built, and why.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/components.css">
+  <style>
+    /* brand theme — gallery: tags, dots, and links stay the same TalkXO blue used on the case-studies index.
+       Only the headline's serif span gets a moving red/purple gradient, below. */
+
+    .doc-title .serif {
+      background: linear-gradient(90deg, #2230ff, #7c3aed, #a855f7, #6d28d9, #2230ff);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: galleryWave 7s ease-in-out infinite;
+    }
+
+    @keyframes galleryWave {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .doc-title .serif {
+        animation: none;
+      }
+    }
+
+    footer.site-foot .foot {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="progress"></div>
+
+  <nav class="site-nav" id="nav">
+    <div class="nav-in">
+      <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+      <div class="nav-links"><a href="index.html">Case studies →</a></div>
+      <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+    </div>
+  </nav>
+
+  <header class="doc-header" style="padding-bottom:0">
+    <div class="wrap">
+      <h1 class="doc-title rv" style="max-width:22ch">WE JUST LOVE DESIGN. <span class="serif">Design that
+          works.</span></h1>
+    </div>
+  </header>
+
+  <section class="doc-section" style="padding-top:52px">
+    <div class="wrap">
+      <div class="folio-grid">
+
+        <a class="folio-card rv" href="reader-core91-vc.html">
+          <div class="fc-frame">
+            <div class="fc-num">01</div>
+            <div class="fc-img" style="background-image:url('assets/img/core91/s2_thesis.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · Venture capital</span>
+            <div class="fc-title">Say it once, say it sharp</div>
+            <p class="fc-sub">A homepage for CORE91.VC — thesis, portfolio, and the ask, with nothing in it that doesn't
+              earn its place.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-city-apartments.html">
+          <div class="fc-frame">
+            <div class="fc-num">02</div>
+            <div class="fc-img" style="background-image:url('assets/img/city-apartments/t2_cards.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · Hospitality</span>
+            <div class="fc-title">Prove it, before you pitch it</div>
+            <p class="fc-sub">A homepage for City Apartments that stacks proof — real buildings, real scale, a real
+              signature — before it ever asks for the enquiry.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-kaya.html">
+          <div class="fc-frame">
+            <div class="fc-num">03</div>
+            <div class="fc-img" style="background-image:url('assets/img/kaya/k2_concern.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · Dermatology &amp; skincare</span>
+            <div class="fc-title">Modern, without losing the white coat</div>
+            <p class="fc-sub">A homepage for Kaya Skin Clinic that modernises the brand for a younger audience — booking
+              first, an AI tool as the hook, retail second — without losing the clinical trust underneath it.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-effy-ai.html">
+          <div class="fc-frame">
+            <div class="fc-num">04</div>
+            <div class="fc-img" style="background-image:url('assets/img/effy/e1_hero.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · HR tech / SaaS</span>
+            <div class="fc-title">Show the product. Name the competitor.</div>
+            <p class="fc-sub">A homepage for Effy AI built on a real product screenshot, a direct comparison against
+              Lattice and spreadsheets, and an open starting price — instead of vague SaaS promises.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-copy-chain.html">
+          <div class="fc-frame">
+            <div class="fc-num">05</div>
+            <div class="fc-img" style="background-image:url('assets/img/copychain/cc4_step6.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Product design · AI tooling</span>
+            <div class="fc-title">Copywriting, mapped not chatted</div>
+            <p class="fc-sub">Copy Chain, TalkXO's own AI copywriting canvas — every draft a branching node, not a
+              message lost in a chat thread.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-stock-portfolio-app.html">
+          <div class="fc-frame">
+            <div class="fc-num">06</div>
+            <div class="fc-img" style="background-image:url('assets/img/stockapp/s3_compare.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Product design · Fintech</span>
+            <div class="fc-title">A portfolio you can actually read</div>
+            <p class="fc-sub">A stock market research app built to visualize holdings clearly, with AI-generated context
+              sitting next to the numbers instead of buried in a separate tab.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-frex-challenge.html">
+          <div class="fc-frame">
+            <div class="fc-num">07</div>
+            <div class="fc-img" style="background-image:url('assets/img/frex/x1_hero.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · Education · Space science</span>
+            <div class="fc-title">A call for research, staged like a launch</div>
+            <p class="fc-sub">A campaign microsite for Education Japan × Ritsumeikan University's FREX programme, built
+              to feel like a mission briefing rather than an academic open call.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-flow-club.html">
+          <div class="fc-frame">
+            <div class="fc-num">08</div>
+            <div class="fc-img" style="background-image:url('assets/img/flowclub/f1_hero.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Website design · Virtual coworking</span>
+            <div class="fc-title">Fight procrastination, bring a crowd</div>
+            <p class="fc-sub">A homepage for Flow Club built on real members and the actual scheduling product,
+              instead of an abstract pitch for a "focus room."</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta" id="cta">
+    <div class="wrap cta-in">
+      <div>
+        <h2>Have a homepage <span class="serif">that needs saying better?</span></h2>
+        <p class="cta-sub">Thirty minutes. We'll look at what it's currently trying to say, and what to cut.</p>
+      </div>
+      <div class="cta-side">
+        <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us
+          <span class="arr">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap foot">
+      <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+
+</html>

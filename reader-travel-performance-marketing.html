@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Sell the Family, Not the Traveller | TalkXO</title>
+<meta name="description" content="A performance marketing model for a Singapore-based premium travel operator — repositioned from generic 'Singapore Tour Packages' to 'Premium Singapore, handled end-to-end,' and optimised for cost per family booking instead of cost per lead. ₹10L in monthly media modelled to a 12X ROAS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  /* Google SERP mockup */
+  .serp-result{padding:16px 18px;border-bottom:1px solid var(--hair-2)}
+  .serp-result:last-child{border-bottom:none}
+  .serp-result.hero{border-left:3px solid var(--blue)}
+  .serp-result.dim{opacity:.5}
+  .serp-ad{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:var(--ink-40);padding:1px 6px;border-radius:3px;margin-right:8px;letter-spacing:.04em;vertical-align:middle}
+  .serp-url{font-size:12px;color:#1a7f37;font-weight:500;vertical-align:middle}
+  .serp-title{margin-top:5px;font-size:15px;font-weight:600;color:#1a0dab;line-height:1.3}
+  .serp-desc{margin-top:4px;font-size:12.5px;color:var(--ink-60);line-height:1.5}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-realestate-retention.html"><span class="cm-tag">Sentiment management · Real estate</span><span class="cm-title">Real estate sentiment management, done right</span></a>
+        <a href="reader-cx-platform-guides.html"><span class="cm-tag">AI customer service · SaaS</span><span class="cm-title">The guide that sells without selling</span></a>
+        <a href="reader-taxfirm-free-tools.html"><span class="cm-tag">Accounting &amp; tax · Content tools</span><span class="cm-title">Built for the search right after the notice</span></a>
+        <a href="reader-ecommerce-content-warehouse.html"><span class="cm-tag">E-commerce · Content &amp; SEO</span><span class="cm-title">Built to outlast the campaign</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">SELL THE FAMILY, <span class="serif">not the traveller.</span></h1>
+    <p class="doc-dek rv d1">A Singapore-based travel operator had real premium infrastructure — 4–5★ hotels, private transfers, curated experiences, and genuine visa &amp; documentation support for inbound families. But it was being marketed like a discount tour-package business, judged lead by lead. Repositioned around "Premium Singapore, handled end-to-end," and optimised for cost per family booking instead of cost per lead, ₹10L a month in media models out to roughly ₹1.2Cr in family travel sales.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Singapore-based premium travel operator</dd></div>
+      <div><dt>Category</dt><dd>Performance marketing</dd></div>
+      <div><dt>Channels</dt><dd>Meta + Google Search</dd></div>
+      <div><dt>Result</dt><dd>12X ROAS</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Stop competing on <b>"Singapore Tour Packages,"</b> and start selling what the family is actually paying for: peace of mind, handled end-to-end.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-shield"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE STATS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="12" data-suffix="X">0X</span></div>
+        <div class="lbl">ROAS, on ₹10L monthly media</div>
+      </div>
+      <div class="stat">
+        <div class="num">₹<span data-count="1.2" data-suffix="Cr">0Cr</span></div>
+        <div class="lbl">Family travel sales, per month</div>
+      </div>
+      <div class="stat">
+        <div class="num">~<span data-count="25">0</span></div>
+        <div class="lbl">Family &amp; group bookings, per month</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="200" data-suffix="%">0%</span></div>
+        <div class="lbl">Marketing ROI, after media cost</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">A premium product, <span class="serif">sold like a commodity.</span></h2>
+    <p class="doc-lede rv d1">Real 4–5★ hotel access, private transfers, and genuine DMC infrastructure for inbound guests — but an acquisition engine still built around "Singapore Tour Packages," the same crowded, price-driven search terms every operator fights over.</p>
+    <p class="doc-p rv d2">Positioned that way, the honest competitive set was ₹30,000–₹50,000 packages — a race to the bottom no premium operator wins on price. And the targeting matched the positioning: broad interest in "Singapore" as a destination, judged purely on cost per lead.</p>
+    <p class="doc-p rv d2">Cost per lead alone made a ₹400 lead look four times worse than a ₹100 one — with no way to see that the ₹400 lead was a family of four about to book a ₹5–10L holiday, and the ₹100 lead was a browser who was never going to buy.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">The lead was never the product. <span class="serif">The family booking was.</span></h2>
+    <p class="doc-p rv d1">Run the same ₹400 lead forward: 400 leads become 25 family bookings, at ₹6,400 acquisition cost each. Spread across an average of four travellers per booking, that's roughly ₹1,600 to acquire one premium traveller — a completely different number, and a completely different business, from the one a cost-per-lead dashboard was describing.</p>
+    <p class="doc-p rv d1">The positioning needed the same reframe. Instead of one more "Singapore Tour Package," the offer became "Premium Singapore, handled end-to-end" — four pillars built around what the operator already does well: premium stays, curated experiences, seamless group logistics, and family travel &amp; compliance assistance. That last pillar quietly does the most work — visa guidance, document checks, pre-departure support — because a family travelling with parents and children isn't just buying a hotel and an itinerary. It's buying the assurance that nothing goes wrong.</p>
+  </div>
+  <div class="wrap" style="margin-top:32px">
+    <div class="note-panel rv d2">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+      <p><b>Why premium, not volume:</b> Singapore's own tourism board reported S$32.8B in tourism receipts in 2025, up 10% year-on-year — MICE receipts alone reaching S$2.3B — and has been explicit that its strategy targets visitors who value distinctive experiences, not the cheapest package on the page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Five campaigns, <span class="serif">split by who's ready to say yes.</span></h2>
+    <p class="doc-p rv d1">Meta creates the aspiration across three family-first audiences; Google captures the people already searching with intent.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="info-grid rv d2">
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></span><span class="wt">40%</span></div>
+        <h4>Premium Singapore Families</h4>
+        <p>"Singapore with the family. Without the hassle." 4–5★ hotels, private transfers, visa &amp; documentation assistance. Lead routed straight to WhatsApp.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span><span class="wt">20%</span></div>
+        <h4>Singapore Luxury</h4>
+        <p>"Don't just visit Singapore. Experience it." Targeted at couples and affluent travellers after a premium holiday, not a group tour.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></span><span class="wt">15%</span></div>
+        <h4>Family Groups</h4>
+        <p>"Planning Singapore for the whole family?" Three generations, 4–8 travellers, one coordinated itinerary — the single most valuable segment in the model.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3" style="margin-top:0">Google: capture intent, not discovery</h3>
+    <p class="doc-p">20% of the budget went to deliberately narrow, high-intent search terms — built to generate fewer enquiries than Meta, and much more valuable ones.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d2">
+      <span class="tag">Singapore premium tour package</span>
+      <span class="tag">Singapore family holiday package</span>
+      <span class="tag">Singapore family tour from India</span>
+      <span class="tag">Luxury Singapore package</span>
+      <span class="tag">Singapore 5 star tour package</span>
+      <span class="tag">Singapore private tour</span>
+      <span class="tag">Singapore family package with visa</span>
+      <span class="tag">Singapore tour package for family</span>
+      <span class="tag">Singapore holiday package with airport transfer</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3">Remarketing: the last 5%</h3>
+    <p class="doc-p">Aimed at people who'd already shown real intent — visited the package page, viewed pricing, started a WhatsApp conversation, watched a video, or left an enquiry half-finished.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:44px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">Two different jobs, two different screens</h3>
+    <p class="fig-desc">Google shows up next to a ₹35,000 group tour and says so, plainly. Meta shows up before anyone's searching at all.</p>
+    <div class="fig-grid rv d2">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">google.com/search?q=singapore+family+holiday+package</div></div>
+          <div class="screen">
+            <div class="serp-result hero">
+              <span class="serp-ad">Ad</span><span class="serp-url">premiumsingapore.travel</span>
+              <div class="serp-title">Premium Singapore, Handled End-to-End</div>
+              <div class="serp-desc">4–5★ hotels · Private transfers · Visa &amp; documentation guidance · Curated family experiences.</div>
+            </div>
+            <div class="serp-result dim">
+              <span class="serp-ad">Ad</span><span class="serp-url">budget-tours.example</span>
+              <div class="serp-title">Singapore Tour Package — ₹35,000 onwards</div>
+              <div class="serp-desc">Group departures, standard hotels, fixed itinerary.</div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Google:</b> not the ₹30,000–₹50,000 race — a different result entirely</div>
+      </div>
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">instagram.com</div></div>
+          <div class="screen">
+            <div class="mockup-social">
+              <div class="so-head"><span class="av"></span><div><b>Premium Singapore Travel</b><span>Sponsored</span></div></div>
+              <div class="so-body">Singapore, but better. Your family's holiday — planned from arrival to departure. 5 days. 5-star stay. Private transfers. Zero holiday chaos.</div>
+              <div class="so-media"><svg class="icon" style="width:26px;height:26px"><use href="assets/icons.svg#i-shield"/></svg></div>
+              <div class="so-actions"><span>👍 Like</span><span>💬 Comment</span><span>↗ Share</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Meta:</b> aspiration first — the family says yes before reading an inclusion</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:52px">
+    <h3 class="doc-h3">The strongest line in the deck</h3>
+    <p class="doc-p">Rather than bury visa and compliance help in the fine print, it became the headline: <b>"From documents to dinner reservations, we've got Singapore covered."</b> Underneath it, six concrete promises, not vague reassurance:</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d2">
+      <span class="tag">Visa &amp; documentation guidance</span>
+      <span class="tag">Airport pickup</span>
+      <span class="tag">Premium hotels</span>
+      <span class="tag">Private/group transfers</span>
+      <span class="tag">Curated experiences</span>
+      <span class="tag">Local support throughout your stay</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "A ₹400 lead looks four times worse than a ₹100 lead — until you realise one of them is a family of four about to book a ₹5–10L holiday, and the other was never going to buy anything."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">₹10L in media, <span class="serif">₹1.2Cr in sales.</span></h2>
+    <p class="doc-lede rv d1">Built around cost per family booking instead of cost per lead, the model turns a ₹10L monthly budget into roughly 25 family and group bookings — and a 12X return on media.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">12X</div>
+        <div class="rh-sub">ROAS, on ₹10L in monthly media</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>₹1.2Cr in monthly family travel sales<span>Built on ~25 family &amp; group bookings and ~100 premium travellers a month.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>₹1,600 to acquire one traveller<span>Not ₹400 a lead — ₹6,400 per family booking, spread across an average of four travellers.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>200% marketing ROI, after media cost<span>On a 25% contribution margin, that's ₹20L in contribution for every ₹10L spent — a cleaner case than ROAS alone.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">One acquisition engine competing on "Singapore Tour Packages," priced against ₹30,000–₹50,000 group tours, and judged lead by lead.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">A premium, end-to-end proposition — three family-first audiences on Meta, high-intent search on Google — judged by cost per family booking instead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Optimising for leads, <span class="serif">not bookings?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map where your funnel is measuring the wrong number — and what a cost-per-booking engine could look like instead.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-realestate-retention.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

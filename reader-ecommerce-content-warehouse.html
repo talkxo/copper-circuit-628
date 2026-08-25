@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Built to Outlast the Campaign | TalkXO</title>
+<meta name="description" content="A full-funnel content warehouse for an e-commerce fraud-prevention and RTO reduction platform — 4 funnel stages, 95 mapped keywords, and content cadence ramped from 76 to 144 pieces a month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .ramp-row{display:flex;align-items:flex-end;gap:1px;background:var(--hair);margin-top:28px;height:140px}
+  .ramp-bar{flex:1;background:var(--paper);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:10px 6px 14px;position:relative}
+  .ramp-bar .fill{width:100%;background:var(--blue-10);border-top:2px solid var(--blue)}
+  .ramp-bar .val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--blue-ink);margin-bottom:6px}
+  .ramp-bar .lbl{position:absolute;bottom:-26px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-creator-platform-youtube.html"><span class="cm-tag">Creator economy · SaaS</span><span class="cm-title">The leads that never searched</span></a>
+        <a href="reader-hair-clinic-journey.html"><span class="cm-tag">Healthcare · Lifecycle automation</span><span class="cm-title">Still there at month nine</span></a>
+        <a href="reader-field-service-seo.html"><span class="cm-tag">B2B SaaS · SEO</span><span class="cm-title">Found by trade, not by category</span></a>
+        <a href="reader-takara-biotech-crm.html"><span class="cm-tag">Biotech · CRM &amp; demand gen</span><span class="cm-title">A CRM funnel built for a biotech leader</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">BUILT TO OUTLAST <span class="serif">the campaign.</span></h1>
+    <p class="doc-dek rv d1">An e-commerce fraud-prevention and RTO platform needed organic presence in a category most buyers don't yet know they're searching for. Instead of a content calendar that ends when the retainer does, the strategy built a full-funnel content warehouse — mapped to the real buyer journey — designed to keep generating leads and organic traffic long after any single piece was published.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>E-commerce fraud &amp; RTO platform</dd></div>
+      <div><dt>Industry</dt><dd>E-commerce · Fraud &amp; logistics tech</dd></div>
+      <div><dt>Approach</dt><dd>Full-funnel content architecture</dd></div>
+      <div><dt>Scope</dt><dd>4-stage journey, 3-month build</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Build a holistic content strategy to build trust, keep prospects engaged, <b>qualify leads</b>, and earn a sense of thought leadership — mostly inbound.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-database"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="4">0</span></div>
+        <div class="lbl">Funnel stages mapped &amp; weighted</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="95">0</span></div>
+        <div class="lbl">Keywords researched across the category</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="144">0</span></div>
+        <div class="lbl">Content pieces/month, at peak</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="7">0</span></div>
+        <div class="lbl">Content formats in rotation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">A real problem. <span class="serif">Nobody's searching for the fix.</span></h2>
+    <p class="doc-lede rv d1">RTO — orders that bounce back before they're ever delivered — is one of the most expensive, least-talked-about problems in Indian e-commerce. But almost nobody searches for the category solution by name.</p>
+    <p class="doc-p rv d2">The core term — "RTO in ecommerce" — sits around 500 searches a month, shared with a couple of well-funded, already-established rivals fighting for the exact same handful of queries. Competing head-on for that pool wasn't a strategy; it was a queue.</p>
+    <p class="doc-p rv d2">Meanwhile, most content marketing in the category was built like a campaign — a sprint of posts timed to a launch, then silence. Value that decayed the moment the retainer ended.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">The buyer's journey is longer <span class="serif">than the keyword list.</span></h2>
+    <p class="doc-p rv d1">Most buyers in this category don't start by knowing they need an RTO platform. They start by asking "what is RTO," "why do so many COD orders bounce back," "how do I even measure this." Ranking for the ten searches people actually type mattered less than owning the entire path from "what is this problem" to "why this platform, why now."</p>
+    <p class="doc-p rv d1">A reader who found a genuinely useful explainer already trusts the source by the time they reach the case study. So the content couldn't be a launch calendar — it needed to be built like infrastructure: a library mapped to every stage of that journey, weighted toward where the real buyer volume sits.</p>
+    <p class="doc-p rv d1">That meant starting from three real buyers, not a generic "D2C brand" persona:</p>
+  </div>
+
+  <div class="wrap" style="margin-top:8px">
+    <div class="info-grid rv d2">
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></span>
+        </div>
+        <h4>D2C brand owner, scaled up</h4>
+        <p><b>Pain:</b> RTO and COD issues that grew right alongside the business.<br><b>Dream:</b> the smoothest possible transaction experience for customers.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-trending-up"/></svg></span>
+        </div>
+        <h4>E-commerce manager, scaling fast</h4>
+        <p><b>Pain:</b> RTO climbing as growth accelerates, with planning always a step behind.<br><b>Dream:</b> a stable setup with RTO under control.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></span>
+        </div>
+        <h4>Traditional retailer going digital</h4>
+        <p><b>Pain:</b> little information or trust in the platforms available.<br><b>Dream:</b> a smooth transition from brick-and-mortar to D2C.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Four stages, <span class="serif">weighted to where buyers actually are.</span></h2>
+    <p class="doc-p rv d1">A four-stage content architecture was built, each stage carrying its own question, its own formats, and its own share of the investment — heaviest at the top of the funnel, where the category itself still needs explaining.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="info-grid rv d2">
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-search"/></svg></span>
+          <span class="wt">50%</span>
+        </div>
+        <h4>Awareness — "What is? Why change?"</h4>
+        <p>Blogs, how-to posts, list posts, infographics, video — explaining what RTO actually costs a brand before naming a solution.</p>
+        <div class="fmt">"Struggling with return orders? Here's everything you need to know" · "RTO, COD fraud &amp; other challenges ecommerce brands will face"</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span>
+          <span class="wt">30%</span>
+        </div>
+        <h4>Consideration — "Why this platform?"</h4>
+        <p>Case studies, testimonials, downloadable checklists and templates that prove the platform's approach works.</p>
+        <div class="fmt">"Why your ecommerce brand needs a fraud detection system" · "How X achieved Y% results" (case study) · downloadable checklist</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></span>
+          <span class="wt">10%</span>
+        </div>
+        <h4>Decision — "Why now?"</h4>
+        <p>Free trials, demos, product comparisons, and readiness guides for teams ready to move.</p>
+        <div class="fmt">"How we're different from GoKwik" · "Everything top D2C brands are doing right (and you're not)" · future-readiness guide</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></span>
+          <span class="wt">10%</span>
+        </div>
+        <h4>Retention — "Why continue?"</h4>
+        <p>Follow-ups, insider guides, FAQs, and social proof for customers already onboard.</p>
+        <div class="fmt">"Do more with the platform" · "How others are using it" — proposed, lowest priority</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:48px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">Cadence, ramped — not launched and left</h3>
+    <p class="fig-desc">Total content pieces live per month, across all four stages, over the first three months of the build.</p>
+    <div class="ramp-row rv d3">
+      <div class="ramp-bar"><span class="val">76</span><div class="fill" style="height:70px"></div><span class="lbl">Month 1</span></div>
+      <div class="ramp-bar"><span class="val">104</span><div class="fill" style="height:100px"></div><span class="lbl">Month 2</span></div>
+      <div class="ramp-bar"><span class="val">144</span><div class="fill" style="height:140px"></div><span class="lbl">Month 3</span></div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:48px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">One template, multiplied across every category it fits</h3>
+    <p class="fig-desc">Rather than write a one-off guide per vertical, a single template was built to be regenerated for each D2C category — the actual mechanism behind "warehouse, not campaign."</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d3" style="margin-top:8px">
+      <span class="tag">Conversion Guide — Beauty D2C</span>
+      <span class="tag">Conversion Guide — Wellness D2C</span>
+      <span class="tag">Conversion Guide — Footwear D2C</span>
+      <span class="tag">Conversion Guide — Clothing D2C</span>
+      <span class="tag">Conversion Guide — Street Fashion D2C</span>
+      <span class="tag">Conversion Guide — Food D2C</span>
+      <span class="tag">Conversion Guide — Coffee D2C</span>
+      <span class="tag">+ every category after</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "A campaign ends when the budget does. A warehouse just keeps paying rent."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">An asset, <span class="serif">not a sprint.</span></h2>
+    <p class="doc-lede rv d1">By month three, the library covered the buyer's entire journey — and kept compounding independent of any single campaign.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">144</div>
+        <div class="rh-sub">Content pieces/month, at peak — up from 76</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>95 keywords mapped, not just brand terms<span>Coverage across the category, from "what is RTO" to product-comparison searches.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>4 funnel stages, each weighted on purpose<span>Heaviest where the real buyer volume sits — awareness, not the bottom of the funnel.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Built to compound, not expire<span>Organic traffic and leads keep arriving long after any individual piece was published.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">A narrow slice of demand — a few hundred category searches — fought head-on against better-funded rivals for the same handful of terms.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">A weighted, four-stage library covering the buyer's whole path, built to keep generating traffic independent of any single push.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Content that ends <span class="serif">when the campaign does?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map your category's real buyer journey and what a compounding content library could look like — yours to keep either way.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-creator-platform-youtube.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

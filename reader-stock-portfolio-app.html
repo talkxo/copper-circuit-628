@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — A Portfolio You Can Actually Read | TalkXO</title>
+<meta name="description" content="Product design case study for a stock market research app — a portfolio and comparison tool built to visualize holdings clearly, with AI-generated context sitting next to the numbers instead of buried in a separate tab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme: keeps default TalkXO blue — this page has no client brand to theme against */
+  .shot-plain{border-radius:10px;overflow:hidden;box-shadow:var(--shadow-doc);border:1px solid var(--hair-2)}
+  .shot-plain .shot{
+    width:100%;background-size:cover;background-position:center top;
+    -webkit-user-select:none;user-select:none;-webkit-user-drag:none;pointer-events:none;
+  }
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/1077;background-image:url('assets/img/stockapp/s1_detail.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/1077;background-image:url('assets/img/stockapp/s2_watchlist.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/1077;background-image:url('assets/img/stockapp/s3_compare.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-frex-challenge.html"><span class="cm-tag">Website design · Education · Space science</span><span class="cm-title">A call for research, staged like a launch</span></a>
+        <a href="reader-flow-club.html"><span class="cm-tag">Website design · Virtual coworking</span><span class="cm-title">Fight procrastination, bring a crowd</span></a>
+        <a href="reader-core91-vc.html"><span class="cm-tag">Website design · Venture capital</span><span class="cm-title">Say it once, say it sharp</span></a>
+        <a href="reader-city-apartments.html"><span class="cm-tag">Website design · Hospitality</span><span class="cm-title">Prove it, before you pitch it</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap">
+    <h1 class="doc-title rv">A PORTFOLIO YOU CAN <span class="serif">actually read.</span></h1>
+    <p class="doc-dek rv d1">A stock market research app, built to visualize a portfolio the way an investor actually thinks about it — live price movement, AI-generated context on every name, and a way to compare tickers side by side, without switching tabs to piece it together. The product was later acquired and now lives on as a component inside a larger trading platform.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Stock market research app</dd></div>
+      <div><dt>Category</dt><dd>Product design</dd></div>
+      <div><dt>Scope</dt><dd>Portfolio &amp; research UI</dd></div>
+      <div><dt>Focus</dt><dd>Data made legible</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">The brief was to make a retail investor's portfolio feel like something they could actually read at a glance — not a spreadsheet, not a wall of tickers. Below is that product, section by section, with the thinking behind each screen.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The stock page</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The news summary sits next to the chart, not behind a tab.</h3>
+          <p>An AI-generated read of what actually moved the stock today, timestamped, sitting directly beside the price — so the "why" and the "what" never need two separate clicks to connect.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · Holdings and research, side by side</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Owned and watched, kept honestly separate.</h3>
+          <p>"Holdings" and "Potential" are two different lists with two different jobs — what you actually own, and what you're deciding on — instead of one undifferentiated watchlist pretending they're the same decision. Alongside it, a filing gets condensed into plain sentences with the source cited, not a 22,000-word document to scroll through.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · Comparing without a blank canvas</span>
+        <div class="shot-plain">
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The comparison starts suggested, not empty.</h3>
+          <p>Overlaying a few tickers is easy to promise and hard to make useful — the tooltip does the actual work, converting four overlapping lines into one readable number per stock at the exact point you're looking at, while "comparison suggestions" solve the blank-canvas problem before it starts.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Building something <span class="serif">data-heavy?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at what your dashboard is currently asking the user to piece together themselves.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

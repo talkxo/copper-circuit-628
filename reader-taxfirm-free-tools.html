@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Built for the Search Right After the Notice | TalkXO</title>
+<meta name="description" content="14 free, no-signup tax tools mapped to the real triggers that send people searching — for a US accounting and tax practice. Bounce rate down from 80–82% to 39%, time on site up to 2–5 minutes, leads up 2X in three months.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme — client-selected navy + cream, overriding the default TalkXO blue for this page only */
+  :root{
+    --blue:#1E3A6E;
+    --blue-ink:#142848;
+    --blue-10:rgba(30,58,110,.08);
+    --blue-16:rgba(30,58,110,.16);
+    --shadow-doc-blue:5px 7px 0 rgba(30,58,110,.14);
+  }
+
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .stat .num.txt{font-size:clamp(30px,4vw,44px)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-ecommerce-content-warehouse.html"><span class="cm-tag">E-commerce · Content &amp; SEO</span><span class="cm-title">Built to outlast the campaign</span></a>
+        <a href="reader-creator-platform-youtube.html"><span class="cm-tag">Creator economy · SaaS</span><span class="cm-title">The leads that never searched</span></a>
+        <a href="reader-hair-clinic-journey.html"><span class="cm-tag">Healthcare · Lifecycle automation</span><span class="cm-title">Still there at month nine</span></a>
+        <a href="reader-field-service-seo.html"><span class="cm-tag">B2B SaaS · SEO</span><span class="cm-title">Found by trade, not by category</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">BUILT FOR THE SEARCH <span class="serif">right after the notice arrives.</span></h1>
+    <p class="doc-dek rv d1">A US-based tax and accounting practice serving creators, freelancers, and international filers had a website with a real problem: high bounce, barely any time on site, thin lead flow. Instead of guessing at blog topics, the team mapped the actual triggers that send someone searching — an IRS notice, an unexpected 1099, a crypto tax deadline — and built a free, no-signup tool for each one.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Tax &amp; accounting practice</dd></div>
+      <div><dt>Industry</dt><dd>Accounting &amp; tax services (US)</dd></div>
+      <div><dt>Audience</dt><dd>Creators, freelancers &amp; international filers</dd></div>
+      <div><dt>Result</dt><dd>2X leads in 3 months</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Turn a government notice or tax-season panic into the moment someone lands on <b>exactly</b> the right tool — not a generic blog post.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-from="81" data-count="39" data-suffix="%">81%</span></div>
+        <div class="lbl">Bounce rate, down from 80–82%</div>
+      </div>
+      <div class="stat">
+        <div class="num txt">2–5min</div>
+        <div class="lbl">Average time on site, up from under a minute</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="2" data-suffix="X">0X</span></div>
+        <div class="lbl">More leads, in 3 months</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="14">0</span></div>
+        <div class="lbl">Free tools live, each its own guide</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">Traffic wasn't the issue. <span class="serif">Staying was.</span></h2>
+    <p class="doc-lede rv d1">Visitors landed and left — 80 to 82% of them bounced, spending under a minute on the site before going elsewhere. Leads trickled in at a rate that didn't match the visits.</p>
+    <p class="doc-p rv d2">Generic tax blog posts didn't match how people actually arrive at an accounting site's door. Nobody browses tax content for fun. They arrive because something just happened — an IRS notice landed, a 1099 showed up for money they didn't know was taxable, a filing deadline is a week away — and a 1,500-word article about "tax tips for freelancers" doesn't answer the one question they actually have.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Work backward <span class="serif">from the trigger.</span></h2>
+    <p class="doc-p rv d1">Every visitor who wasn't already a client arrived because something happened first. Mapping those triggers backward — from the moment of panic to the search that followed — meant mapping the audience too: young, tech-savvy earners who don't want a phone call, they want an answer right now, without handing over an email address to get it.</p>
+    <p class="doc-p rv d1">So the plan became: for every real trigger, build a tool that answers the question directly, embed it inside a genuinely useful guide, and let the guide's SEO and the tool's usefulness do the work a gated PDF never could.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:8px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-mail"/></svg></span>
+          <div><b>A notice arrives</b><span>IRS letter, penalty, or audit fear</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">IRS Penalty Calculator</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Tax Helper (Chrome extension)</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">FBAR/FATCA Checker</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+          <div><b>An unexpected 1099 shows up</b><span>Platform or creator income</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Creator Tax Calculator</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">OnlyFans Tax Calculator</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Staking Rewards Checker</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-clock"/></svg></span>
+          <div><b>A deadline is close</b><span>Quarterly or annual filing</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Tax Deadline Calendar</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Quarterly Tax Calculator</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></span>
+          <div><b>A bigger decision looms</b><span>Scaling up, or going international</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Tax Strategy Estimator</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">CA/LA Business Tax Calculator</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">FEIE Savings Calculator</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Fourteen tools, <span class="serif">zero signups.</span></h2>
+    <p class="doc-p rv d1">Fourteen free, no-signup tools were built and shipped — each mapped to a specific trigger, each embedded inside a comprehensive guide rather than gated behind an email form. Calculations run entirely in the browser; nothing is stored, nothing is required to get an answer.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:48px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">A front door for every trigger, not one generic form</h3>
+    <p class="fig-desc">Each card below is a live, working tool — not a mockup of one.</p>
+    <div class="fig-grid cols-1 rv d2">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">free-tools</div></div>
+          <div class="screen">
+            <div class="vertical-grid">
+              <div class="vg-cards">
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+                  <h5>Creator Tax Calculator</h5>
+                  <p>Self-employment tax estimates for content creators</p>
+                  <a>Open calculator →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-database"/></svg></span>
+                  <h5>Crypto Gains Calculator</h5>
+                  <p>Capital gains on cryptocurrency trades</p>
+                  <a>Open calculator →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-mail"/></svg></span>
+                  <h5>IRS Penalty Calculator</h5>
+                  <p>Failure-to-file &amp; failure-to-pay estimates</p>
+                  <a>Open calculator →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-calendar"/></svg></span>
+                  <h5>Tax Deadline Calendar</h5>
+                  <p>Every federal deadline, downloadable</p>
+                  <a>Open calculator →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-shield"/></svg></span>
+                  <h5>FBAR/FATCA Checker</h5>
+                  <p>Do you need to file, and what for</p>
+                  <a>Open calculator →</a>
+                </div>
+                <div class="vg-card">
+                  <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></span>
+                  <h5>Tax Helper for Chrome</h5>
+                  <p>In-page field explanations, nothing sent</p>
+                  <a>Add to Chrome →</a>
+                </div>
+              </div>
+              <div class="vg-pager">
+                <span>Prev</span><span class="on">1</span><span>2</span><span>3</span><span>Next</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Live today:</b> 14 tools, spanning creators, crypto, business, and international filers</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:48px">
+    <p class="doc-p">Every tool sits inside a long-form guide — the Creator Tax Guide alone runs sixteen minutes of genuinely useful reading before the calculator even appears, covering how each type of creator income is taxed, the hobby-vs-business test, and record-keeping — so the search traffic that finds the guide has a reason to stay for the tool, and the tool gives the guide a reason to rank.</p>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "Nobody bookmarks a tax blog. They bookmark the calculator that answered their actual question."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">From a bounce <span class="serif">to a stay.</span></h2>
+    <p class="doc-lede rv d1">Same traffic sources, dramatically different behavior once visitors landed on something that actually answered their question.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">39%</div>
+        <div class="rh-sub">Bounce rate, down from 80–82%</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>2–5 minutes on site, up from under a minute<span>Varying by tool and season — a crypto calculator spikes near tax deadlines, a penalty calculator spikes after IRS notice season.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Leads up 2X in three months<span>Same top-of-funnel traffic, a website that finally gave people a reason to stay and book a call.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>14 tools live, one for nearly every trigger<span>Creators, crypto and staking traders, business owners, and international filers each have their own front door.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">Generic tax content. 80–82% bounce, under a minute on site, a thin trickle of leads relative to the traffic arriving.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">14 trigger-mapped, no-signup tools inside real guides — 39% bounce, minutes on site, double the leads in a quarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Traffic arrives. <span class="serif">Does it stay?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map the real triggers that send your audience searching — and what a tool built for that exact moment could look like.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-ecommerce-content-warehouse.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

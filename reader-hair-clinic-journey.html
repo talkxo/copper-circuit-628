@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Still There at Month Nine | TalkXO</title>
+<meta name="description" content="A 12-month patient lifecycle, mapped stage by stage for an Australia-based hair restoration clinic — 6 automated queues and 29 triggered touchpoints, from first enquiry to the twelve-month result.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .stage-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .stage-row span{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--ink-60);
+    border:1px solid var(--hair-2);border-radius:20px;padding:6px 12px;background:var(--paper);
+  }
+  .stage-row span.dim{color:var(--ink-40);border-style:dashed}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-field-service-seo.html"><span class="cm-tag">B2B SaaS · SEO</span><span class="cm-title">Found by trade, not by category</span></a>
+        <a href="reader-takara-biotech-crm.html"><span class="cm-tag">Biotech · CRM &amp; demand gen</span><span class="cm-title">A CRM funnel built for a biotech leader</span></a>
+        <a href="reader-touchpoints-ev.html"><span class="cm-tag">EV &amp; mobility</span><span class="cm-title">The follow-up that closes the sale</span></a>
+        <a href="reader-abm-video-ai.html"><span class="cm-tag">Enterprise AI · sports media</span><span class="cm-title">Your audience is out there</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">STILL THERE AT <span class="serif">month nine.</span></h1>
+    <p class="doc-dek rv d1">A hair restoration clinic's story doesn't end at the operating table — results take up to a year to show. Most patient communication ends the moment the deposit clears. This one didn't: every stage of the journey, from first enquiry to the twelve-month result, got its own moment to check in.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Hair restoration clinic (AU)</dd></div>
+      <div><dt>Industry</dt><dd>Healthcare · Hair restoration</dd></div>
+      <div><dt>Approach</dt><dd>Lifecycle email automation</dd></div>
+      <div><dt>Scope</dt><dd>12-month patient journey</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Map every real stage of the patient journey — not just the sale — so <b>nobody goes quiet</b>, especially months after the surgery is done.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-calendar"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="6">0</span></div>
+        <div class="lbl">Automated nurture queues</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="29">0</span></div>
+        <div class="lbl">Triggered touchpoints, timed to the journey</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="12">0</span></div>
+        <div class="lbl">Months mapped, enquiry to final review</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="9">0</span></div>
+        <div class="lbl">CRM lifecycle stages, each with its own message</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">The sale ends. <span class="serif">The story doesn't.</span></h2>
+    <p class="doc-lede rv d1">A hair transplant doesn't show its result on the day of surgery — new growth takes six to twelve months to come through. Most of the marketing effort, understandably, was aimed at the part before that: get the enquiry to a consult, get the consult to a booking.</p>
+    <p class="doc-p rv d2">Which meant the riskiest part of the relationship — the long, invisible waiting period — was also the quietest one. Leads who didn't book after a consult drifted with no further contact. Patients who did have surgery got a single post-op note, then nothing, for months, right when doubt (or a disappointing early result) was most likely to surface.</p>
+    <p class="doc-p rv d2">Reviews, referrals, revision consults — all left to whichever patient happened to remember to call.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Nine stages, <span class="serif">not one funnel.</span></h2>
+    <p class="doc-p rv d1">The fix started with mapping the entire patient journey as it actually exists in the CRM — not "lead to sale," but every real stage a person could sit in.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="stage-row rv d2">
+      <span>Contacted</span><span>Appointment scheduled</span><span>Consulted</span><span class="dim">The key nurturing segment</span><span>Booked treatment</span><span>Deposit paid</span><span>Completed session</span><span>Post-op</span><span class="dim">Lost / indecisive</span>
+    </div>
+  </div>
+  <div class="wrap-doc" style="margin-top:28px">
+    <p class="doc-p rv d3">Each stage carried its own real question, and its own natural moment to ask it. A lead who hasn't booked a consult in seven days needs a nudge, not a hard sell. A patient three weeks from surgery needs practical prep information, not marketing. A patient six months post-op is at exactly the point where new growth is becoming visible — and exactly the point most clinics have already stopped talking to them.</p>
+    <p class="doc-p rv d3">The insight: timing the message to the moment in the journey mattered more than the message itself.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Six queues, <span class="serif">timed to the journey.</span></h2>
+    <p class="doc-p rv d1">Six automated queues were built in the CRM, each triggered by where a person actually was — not a single generic drip, but a different logic for every stage.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-user"/></svg></span>
+          <div><b>Lead queue</b><span>New enquiry, not yet consulted</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Day 0 · Book a consult</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 3–7 · Slot &amp; booking nudges</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 14 · Confirmed → next queue</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-calendar"/></svg></span>
+          <div><b>Consultation queue</b><span>Qualified for surgery, or not</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Qualified → personalised quote</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">7 days · Still deciding? nudge</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Unqualified → non-surgical options</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-clock"/></svg></span>
+          <div><b>Surgery queue</b><span>Pre-op countdown</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">21 days out · What to expect</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">10 days out · Blood test reminder</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">1 day out · Tomorrow's the day</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-mail"/></svg></span>
+          <div><b>Re-engagement queue</b><span>Went quiet after a consult</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">30 days · Real patient questions</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">90 days · Is this right for me?</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">180 days · 6-month check-in</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span>
+          <div><b>CX queue</b><span>One week post-op</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Healing &amp; experience survey</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Positive → review request</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Negative → recovery flag</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg></span>
+          <div><b>Recovery queue</b><span>The year it takes to see results</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">1 month · Book a follow-up</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">6 months · Progress check-in</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">12 months · Final review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:52px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">The recovery queue, in a patient's inbox</h3>
+    <p class="fig-desc">The stretch where most clinics go quiet — six touches, spaced from one week to twelve months after surgery.</p>
+    <div class="fig-grid cols-1 rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">inbox — recovery queue</div></div>
+          <div class="screen">
+            <div class="mockup-inbox">
+              <div class="mi-row">
+                <svg class="icon mi-flag on"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">Follow up reminder!</span><span class="mi-preview">— since your procedure, here's what to expect this week</span></div>
+                <span class="mi-when">1 week</span>
+              </div>
+              <div class="mi-row">
+                <svg class="icon mi-flag on"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">Book a follow up appointment</span><span class="mi-preview">— since your procedure, let's check on early progress</span></div>
+                <span class="mi-when">1 month</span>
+              </div>
+              <div class="mi-row">
+                <svg class="icon mi-flag"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">Let's take another look</span><span class="mi-preview">— since your procedure, growth should be starting</span></div>
+                <span class="mi-when">3 months</span>
+              </div>
+              <div class="mi-row">
+                <svg class="icon mi-flag on"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">It's been 6 months...</span><span class="mi-preview">— since your procedure, results should be visible</span></div>
+                <span class="mi-when">6 months</span>
+              </div>
+              <div class="mi-row">
+                <svg class="icon mi-flag"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">9 months in. How are you feeling?</span><span class="mi-preview">— since your procedure, a personal check-in</span></div>
+                <span class="mi-when">9 months</span>
+              </div>
+              <div class="mi-row">
+                <svg class="icon mi-flag on"><use href="assets/icons.svg#i-check-circle"/></svg>
+                <div class="mi-body"><span class="mi-subject">Let's set up a final follow up appointment</span><span class="mi-preview">— since your procedure, time for the final review</span></div>
+                <span class="mi-when">12 months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Purpose:</b> a reason to hear from the clinic at every meaningful month, not just the sale</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "The result takes a year to show. So the relationship needed to last a year too — not just the six weeks it takes to close."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">No stage <span class="serif">left silent.</span></h2>
+    <p class="doc-lede rv d1">Every one of the nine CRM stages now has a message attached to it — including the ones, months after surgery, that used to have none.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">12</div>
+        <div class="rh-sub">Months of patient journey, fully mapped</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>6 queues covering every CRM stage<span>Not just the sale — enquiry, consult, surgery, recovery, and re-engagement all have their own logic.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>29 touchpoints, each timed to a real moment<span>Never a generic drip — every message tied to where the patient actually is.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Reviews and revisions routed automatically<span>The post-op survey branches straight to a review ask or a recovery flag, depending on the answer.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">Communication stopped at the operating table. Anyone who didn't convert drifted silently; anyone who did was on their own for the year it takes to see the result.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Every stage — enquiry, consult, pre-op, recovery, review — has a defined message and a defined trigger, all the way through to the twelve-month mark.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Where does your journey <span class="serif">go quiet?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map every real stage your customers actually pass through — and where the silence is costing you reviews, referrals, or revenue.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-field-service-seo.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Effy AI Website Design | TalkXO</title>
+<meta name="description" content="Website design case study for Effy AI, an AI performance-review and 360 feedback platform for SMBs — a homepage built on a real product screenshot, a direct competitor comparison, and an open starting price, instead of vague SaaS promises.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — Effy AI: indigo/violet, overriding the default TalkXO blue for this page only */
+    --blue:#6a56e8; --blue-ink:#4a3bc4;
+  }
+  .doc-title .serif{color:var(--blue-ink)}
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/778; background-image:url('assets/img/effy/e1_hero.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/569; background-image:url('assets/img/effy/e2_trusted.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/485; background-image:url('assets/img/effy/e3_features.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1800/262; background-image:url('assets/img/effy/e4_video.jpg')}
+  .shot-item[data-n="5"] .shot{aspect-ratio:1800/480; background-image:url('assets/img/effy/e5_stats.jpg')}
+  .shot-item[data-n="6"] .shot{aspect-ratio:1800/481; background-image:url('assets/img/effy/e6_compare.jpg')}
+  .shot-item[data-n="7"] .shot{aspect-ratio:1800/331; background-image:url('assets/img/effy/e7_data.jpg')}
+  .shot-item[data-n="8"] .shot{aspect-ratio:1800/206; background-image:url('assets/img/effy/e8_cta.jpg')}
+  .shot-item[data-n="9"] .shot{aspect-ratio:1800/595; background-image:url('assets/img/effy/e9_footer.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-copy-chain.html"><span class="cm-tag">Product design · AI tooling</span><span class="cm-title">Copywriting, mapped not chatted</span></a>
+        <a href="reader-stock-portfolio-app.html"><span class="cm-tag">Product design · Fintech</span><span class="cm-title">A portfolio you can actually read</span></a>
+        <a href="reader-frex-challenge.html"><span class="cm-tag">Website design · Education · Space science</span><span class="cm-title">A call for research, staged like a launch</span></a>
+        <a href="reader-flow-club.html"><span class="cm-tag">Website design · Virtual coworking</span><span class="cm-title">Fight procrastination, bring a crowd</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">SHOW THE PRODUCT. <span class="serif">Name the competitor.</span></h1>
+    <p class="doc-dek rv d1">Effy AI sells performance-review software into a category full of vague promises and gated demos. The homepage does the opposite: a real product screenshot in the hero, a direct comparison table naming Lattice and spreadsheets by name, and a starting price stated in the open — built to convince a busy HR buyer without ever asking them to fill in a form first.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Effy AI</dd></div>
+      <div><dt>Category</dt><dd>Website design</dd></div>
+      <div><dt>Scope</dt><dd>Full homepage design</dd></div>
+      <div><dt>Focus</dt><dd>Proof over promises</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">Effy AI builds AI-assisted performance reviews and 360° feedback for small and mid-sized companies — a category dominated by enterprise tools like Lattice, and by nothing at all (spreadsheets). The brief was a homepage that could win a buyer's trust in one visit, using specifics instead of the category's usual vagueness. Below is that homepage, section by section, with the thinking behind each one.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The hero</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The product, not a stock photo.</h3>
+          <p>The hero image is the actual dashboard — a real review, a real radar chart — not an illustration of what the product might look like. For a tool this specific, showing the interface does more convincing than another headline could.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · The trust signal</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Video, not text quotes.</h3>
+          <p>Three testimonials, each with a real face on a real video thumbnail instead of a name next to a headshot icon — paired with a plain company count, country count, and star rating instead of a wall of logos.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · The pitch</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The pitch is what it isn't.</h3>
+          <p>"Not 15 modules your employees never open" does more work than any feature list — naming the competitor's actual weakness before listing its own two pillars: one system for every review type, and goals wired directly into them.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · The demo</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>A demo, offered without a form.</h3>
+          <p>One click to a walkthrough — no gated video, no "enter your email to watch" — for the visitor who wants to see the product before they'll talk to anyone about it.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="5">
+        <span class="shot-num">05 · The numbers</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Speed, price, and time saved — nothing else.</h3>
+          <p>The three numbers a busy HR buyer actually stops for: no sales call to launch, a starting price stated in the open, and hours saved per review cycle instead of a vague productivity claim.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="6">
+        <span class="shot-num">06 · The comparison</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Naming the competitor is the pitch.</h3>
+          <p>A direct table against Lattice and spreadsheets — setup time, free plan, starting price, onboarding — the exact questions a switching buyer is already asking, answered without hiding behind "request a demo."</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="7">
+        <span class="shot-num">07 · The trust layer</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Security, in three plain sentences.</h3>
+          <p>No compliance-badge wall — just three specific claims (AWS-hosted, GDPR compliant, configurable retention) written for a buyer evaluating the product, not a security auditor filing a checklist.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="8">
+        <span class="shot-num">08 · The close</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Three words instead of a paragraph.</h3>
+          <p>The lowest-friction close on the page — no new argument, just the two buttons a convinced visitor needs: sign up, or go check pricing.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="9">
+        <span class="shot-num">09 · The footer</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Effy AI</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>A footer built for the second visit.</h3>
+          <p>Product, case studies, and comparison pages sit alongside an "ask about Effy AI" prompt for Claude, ChatGPT, Gemini, and Grok — a footer written for how people actually research software now, not just a sitemap.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Selling into a category <span class="serif">full of vague promises?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at where your homepage is hiding behind adjectives instead of specifics.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

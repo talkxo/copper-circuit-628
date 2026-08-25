@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — The Leads That Never Searched | TalkXO</title>
+<meta name="description" content="A two-stage YouTube video ad strategy for an all-in-one content creator platform placed ads in front of people watching competitor tutorials and comparison videos — producing 30% higher-intent leads and a 2X qualification rate versus search.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  .stat-grid.two{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .stat .num.big{font-size:clamp(40px,5.4vw,64px)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-hair-clinic-journey.html"><span class="cm-tag">Healthcare · Lifecycle automation</span><span class="cm-title">Still there at month nine</span></a>
+        <a href="reader-field-service-seo.html"><span class="cm-tag">B2B SaaS · SEO</span><span class="cm-title">Found by trade, not by category</span></a>
+        <a href="reader-takara-biotech-crm.html"><span class="cm-tag">Biotech · CRM &amp; demand gen</span><span class="cm-title">A CRM funnel built for a biotech leader</span></a>
+        <a href="reader-touchpoints-ev.html"><span class="cm-tag">EV &amp; mobility</span><span class="cm-title">The follow-up that closes the sale</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">THE LEADS THAT <span class="serif">never searched.</span></h1>
+    <p class="doc-dek rv d1">An all-in-one platform for content creators wasn't short on search traffic — it was short on buyers. A two-stage YouTube video ad strategy met the same audience earlier: while they were mid-video, comparing payment tools and course platforms, not yet typing a branded search.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>All-in-one content creator platform</dd></div>
+      <div><dt>Industry</dt><dd>Creator economy · SaaS</dd></div>
+      <div><dt>Channel</dt><dd>YouTube video ads (paid)</dd></div>
+      <div><dt>Result</dt><dd>2X lead qualification rate</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Reach creators <b>mid-decision</b> — while they're watching the exact video that means they're already comparing payment tools and course platforms.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid two">
+      <div class="stat">
+        <div class="num big"><span data-count="30" data-suffix="%">0%</span></div>
+        <div class="lbl">Higher-intent leads, vs. search</div>
+      </div>
+      <div class="stat">
+        <div class="num big"><span data-count="2" data-suffix="X">0X</span></div>
+        <div class="lbl">More leads qualifying than from search</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">Plenty of traffic. <span class="serif">Not enough buyers.</span></h2>
+    <p class="doc-lede rv d1">Search wasn't the weak link — the platform ranked, and paid search brought steady volume. The weak link was what that traffic turned into.</p>
+    <p class="doc-p rv d2">Search captures people who already know what they're looking for — "content creator platform," "course selling software" — a narrow, late-stage pool, usually mid-comparison with two other tabs open, arriving with no context for why this platform specifically fit them.</p>
+    <p class="doc-p rv d2">Most of the actual audience — working creators, coaches, people just starting to sell a course — weren't typing that yet. They were earlier in the problem, and search was never going to catch them there.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">The shopping happens <span class="serif">while they're watching, not searching.</span></h2>
+    <p class="doc-p rv d1">Someone watching a "Thinkific vs Teachable" comparison isn't casually browsing — they're actively shopping for course-selling software, just doing it on YouTube instead of Google. Someone watching an "Instamojo tutorial" is wrestling with the exact problem the product solves: getting paid reliably. A search campaign only catches these people later, if they ever type a branded query at all.</p>
+    <p class="doc-p rv d1">That meant the addressable audience wasn't a keyword list — it was a list of videos. Competitor tutorials, competitor reviews, direct platform-comparison content, and the adjacent world of people already selling expertise for a living: personal trainers, business coaches, small business owners starting to teach what they know.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Two ad stages, <span class="serif">placed inside the decision itself.</span></h2>
+    <p class="doc-p rv d1">A two-stage YouTube video ad architecture was built around where the audience actually was — not a search results page, but the videos they were already watching.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="track-grid rv d1">
+      <div class="track">
+        <span class="badge good"><i></i>Stage 1 · Brand awareness</span>
+        <h4>5-second bumper, straight to the USP</h4>
+        <p>An unskippable 5-second ad, just the product's core value — scheduling and getting paid for courses — placed in front of the target audience and the keyword-themed placements below.</p>
+      </div>
+      <div class="track">
+        <span class="badge warn"><i></i>Stage 2 · Traffic (retarget)</span>
+        <h4>15s+ non-skippable, product + proof</h4>
+        <p>Anyone who watched the bumper fully, or engaged with it, was retargeted with a longer ad — how the product actually works, testimonials, and a push straight to sign-up.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3" style="margin-top:0">Placed in front of the exact moment of comparison</h3>
+    <p class="doc-p">Keyword-themed placements ran the ad before videos on these searches — reaching people already comparing tools, not waiting for them to search the category by name.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="tags rv d2" style="margin-top:8px">
+      <span class="tag">Thinkific vs Teachable</span>
+      <span class="tag">Thinkific vs Kajabi</span>
+      <span class="tag">Instamojo tutorial</span>
+      <span class="tag">Instamojo review</span>
+      <span class="tag">Best payment gateway for courses</span>
+      <span class="tag">Best platform to sell online courses</span>
+      <span class="tag">Best platform to teach online classes</span>
+      <span class="tag">Best payment gateway for small businesses</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:44px">
+    <h3 class="doc-h3" style="margin-top:0">And in front of the right kind of person</h3>
+    <p class="doc-p">Layered with demographic (22–40, metro cities) and affinity targeting: personal trainers, business coaches, small business owners, people starting a business, and anyone already interested in online courses or online banking.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:44px">
+    <div class="fig-grid cols-1 rv d3">
+      <div class="fig">
+        <div class="mockup-video" style="background:linear-gradient(135deg,var(--ink),#2a2820)">
+          <div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="meta"><span>Thinkific vs Teachable — comparison</span><span>Ad · 0:05</span></div>
+        </div>
+        <div class="fig-cap"><b>Stage 1 bumper:</b> shown before a direct competitor-comparison video</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "A search ad waits to be found. This one showed up while the decision was still being made."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">Found earlier, <span class="serif">converted better.</span></h2>
+    <p class="doc-lede rv d1">Leads reached mid-video, already in a comparison mindset, arrived qualifying at nearly twice the rate of anything search brought in.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">2X</div>
+        <div class="rh-sub">More leads qualifying than from search</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>30% higher-intent leads, vs. search<span>Reached while actively comparing tools, not cold and not yet typing a branded query.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Two stages, one funnel<span>A 5-second bumper for reach, a 15s+ retarget for anyone who showed real engagement.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Placed at the moment of comparison<span>Shown against the exact competitor tutorials and comparison videos the audience was already watching.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">Search traffic, ranked and paid for — but arriving cold, mid-comparison with two other tabs open, no context for why this platform fit.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">A two-stage video strategy meeting the same buyer earlier — while they were mid-decision, watching the exact content that proves they're shopping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-hair-clinic-journey.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

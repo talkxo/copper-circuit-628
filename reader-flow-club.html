@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Flow Club Website Design | TalkXO</title>
+<meta name="description" content="Website design case study for Flow Club, a virtual coworking platform — a homepage built on real members, a real five-step session structure, and the actual scheduling product instead of a generic 'focus room' pitch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — Flow Club: periwinkle indigo accent + deep navy ink, pulled from the site's own stat numbers and CTA buttons */
+    --blue:#5b63e0; --blue-ink:#0b1351;
+  }
+  .doc-title .serif{color:var(--blue-ink)}
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/1164;background-image:url('assets/img/flowclub/f1_hero.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/1171;background-image:url('assets/img/flowclub/f2_members.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/1288;background-image:url('assets/img/flowclub/f3_howitworks.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1800/484; background-image:url('assets/img/flowclub/f4_stats.jpg')}
+  .shot-item[data-n="5"] .shot{aspect-ratio:1800/1007;background-image:url('assets/img/flowclub/f5_structure.jpg')}
+  .shot-item[data-n="6"] .shot{aspect-ratio:1800/275; background-image:url('assets/img/flowclub/f6_press.jpg')}
+  .shot-item[data-n="7"] .shot{aspect-ratio:1800/918; background-image:url('assets/img/flowclub/f7_features.jpg')}
+  .shot-item[data-n="8"] .shot{aspect-ratio:1800/962; background-image:url('assets/img/flowclub/f8_app.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-core91-vc.html"><span class="cm-tag">Website design · Venture capital</span><span class="cm-title">Say it once, say it sharp</span></a>
+        <a href="reader-city-apartments.html"><span class="cm-tag">Website design · Hospitality</span><span class="cm-title">Prove it, before you pitch it</span></a>
+        <a href="reader-kaya.html"><span class="cm-tag">Website design · Dermatology &amp; skincare</span><span class="cm-title">Modern, without losing the white coat</span></a>
+        <a href="reader-effy-ai.html"><span class="cm-tag">Website design · HR tech / SaaS</span><span class="cm-title">Show the product. Name the competitor.</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">FIGHT PROCRASTINATION, <span class="serif">bring a crowd.</span></h1>
+    <p class="doc-dek rv d1">Flow Club sells virtual coworking sessions — real hosts, real members, a timer, and a webcam grid, built around the idea that willpower is overrated and other people's energy isn't. The homepage skips the abstract "focus room" pitch and leads with the actual scheduling product, real member testimonials, and a five-step session structure, instead of asking a visitor to imagine what the experience feels like.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Flow Club</dd></div>
+      <div><dt>Category</dt><dd>Website design</dd></div>
+      <div><dt>Scope</dt><dd>Full homepage design</dd></div>
+      <div><dt>Focus</dt><dd>Community as the product</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">Flow Club is virtual coworking — book a session, show up on camera with strangers who also have work to do, and use their focus as a draft to get your own done. The brief was a homepage that sold the community and the structure, not just the concept. Below is that homepage, section by section, with the thinking behind each one.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The hero</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The product, embedded in the pitch.</h3>
+          <p>The hero mockup isn't an illustration of "a scheduling app" — it's the real Upcoming Sessions screen, real session cards and all. A New York Times line does the credibility work in one sentence, so the headline gets to stay about fun, not features.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · Our Members</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Named members, not stock avatars.</h3>
+          <p>A university professor, a graduate student, a financial analyst, a poet — real photos, real job titles, real quotes about ADHD and body-doubling. The 1,200+ hosts and 94% stat sit above them as the numeric case, before the human one.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · How Flow Club Works</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Five steps, told like a session, not a spec.</h3>
+          <p>Book a session, show up, share your goals, start doing, debrief & celebrate — each one gets its own small product shot instead of a generic icon, so the sequence reads like what actually happens on a call rather than a feature list.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · The Power of Intentional Action</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Three numbers, set big enough to not need a chart.</h3>
+          <p>98%, 91%, 97% — professional improvement, meeting personal obligations, starting difficult tasks. No bar graph, no icon set. At that size, the numbers are the entire argument.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="5">
+        <span class="shot-num">05 · Proof, right after the claim</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>"Professional and without judgement" gets a screenshot.</h3>
+          <p>The pull quote breaks the page, then two real in-product views back it up immediately — the host directory for "our members," and a live muted-work session grid with visible goals for "our structure." The claim and its evidence sit in the same section.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="6">
+        <span class="shot-num">06 · The press mentions</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Credibility, sized down on purpose.</h3>
+          <p>The New York Times, CNN, WSJ, and four more sit in a quiet grey strip after the member proof, not before it — a supporting signal once the case is already made, not the headline act.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="7">
+        <span class="shot-num">07 · The method, named</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>"Body doubling" and "dopaminergic design," not "features."</h3>
+          <p>Naming the actual psychological mechanisms — with a link out to explain body doubling for anyone who's never heard the term — turns what could be vague self-help language into something that reads like it was designed on purpose.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="8">
+        <span class="shot-num">08 · The real app, live</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Flow Club — Upcoming Sessions</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The screenshot in the hero, and the real thing.</h3>
+          <p>Full nav, real filters — Times & Durations, Themes, Hosts — a live "204 flowing in" counter, and session cards grouped by date. It's the same product shown in the marketing mockup, which is the point: nothing in the pitch is staged.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Selling a community, <span class="serif">not just a tool?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at whether your homepage proves it, or just claims it.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

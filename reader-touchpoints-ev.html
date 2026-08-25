@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Turning Test-Drive Excitement Into Signed Deliveries | TalkXO</title>
+<meta name="description" content="How personalised Email + WhatsApp journeys lifted post-test-drive conversion from 34% to 51% for an EV brand, and cut cancellations by 31% in 90 days.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  /* brand theme — Revolt: red + black, overriding the default TalkXO blue accent for this page only */
+  :root{
+    --blue:#D6262C;
+    --blue-ink:#A81B20;
+    --blue-10:rgba(214,38,44,.08);
+    --blue-16:rgba(214,38,44,.16);
+    --shadow-doc-blue:5px 7px 0 rgba(214,38,44,.14);
+  }
+
+  /* page-specific: persona grid, hero panel */
+  .persona-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border-left:1px solid var(--hair);border-top:1px solid var(--hair)}
+  .persona{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:26px 22px}
+  .persona-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .persona-head .ic{
+    width:36px;height:36px;border-radius:50%;background:var(--blue-10);color:var(--blue-ink);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .persona-head .ic .icon{width:17px;height:17px}
+  .persona .tag{margin-bottom:0}
+  .persona h4{font-size:16.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+  .persona p{font-size:13.5px;line-height:1.65;color:var(--ink-60);font-weight:500}
+
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:34ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-abm-video-ai.html"><span class="cm-tag">Enterprise AI · sports media</span><span class="cm-title">Your audience is out there</span></a>
+        <a href="reader-d2c-supplements.html"><span class="cm-tag">Performance marketing · D2C</span><span class="cm-title">D2C multivitamins, search ads multi-gains</span></a>
+        <a href="reader-travel-performance-marketing.html"><span class="cm-tag">Performance marketing · Travel</span><span class="cm-title">Sell the family, not the traveller</span></a>
+        <a href="reader-realestate-retention.html"><span class="cm-tag">Sentiment management · Real estate</span><span class="cm-title">Real estate sentiment management, done right</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">THE FOLLOW-UP THAT <span class="serif">closes the sale.</span></h1>
+    <p class="doc-dek rv d1">A funded electric-vehicle brand had riders leaving showrooms excited — then going quiet for three weeks. Personalised Email + WhatsApp journeys, built around who each buyer actually was, turned that silence into signed deliveries.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Revolt Motors</dd></div>
+      <div><dt>Channels</dt><dd>Email · WhatsApp</dd></div>
+      <div><dt>Journeys</dt><dd>3 personalised tracks</dd></div>
+      <div><dt>Time to result</dt><dd>90 days</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Keep the <b>excitement</b> of the test drive alive long enough to close it — before doubt, distance, or a competitor does.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE RESULTS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-from="34" data-count="51" data-suffix="%">34%</span></div>
+        <div class="lbl">Post-test-drive conversion</div>
+      </div>
+      <div class="stat">
+        <div class="num">↓<span data-count="31" data-suffix="%">0%</span></div>
+        <div class="lbl">Cancellation rate, 2-wk window</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="84" data-suffix="%">0%</span></div>
+        <div class="lbl">WhatsApp open rate</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="3">0</span></div>
+        <div class="lbl">Personalised journeys built</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">Compounding <span class="serif">cancellations.</span></h2>
+    <p class="doc-lede rv d1">The showroom experience was strong — riders left excited, questions answered, intent clearly high. The two to three weeks after were a void.</p>
+    <p class="doc-p rv d2">No personalised follow-up. No content that matched the model they'd ridden, or the stage of the decision they were in. Just one generic email sequence, built for no one in particular.</p>
+    <p class="doc-p rv d2"><b>Post-test-drive conversion sat at 34%.</b> Cancellations in the consideration window were quietly compounding — and the sales team had no visibility into why buyers were going cold.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">One empty stage, <span class="serif">three different buyers.</span></h2>
+    <p class="doc-p rv d1">A buyer-profiling exercise mapped who was actually walking into showrooms — and what happened to them after they left. It didn't just find an under-served stage. It found an almost entirely empty one, with buyers left to fill the gap themselves: third-party reviews, competitor comparisons, forum threads.</p>
+    <p class="doc-p rv d1">The brand had invested heavily in getting riders to the test drive, then stepped aside at the exact moment the decision was being made.</p>
+  </div>
+  <div class="wrap" style="margin-top:38px">
+    <div class="persona-grid rv d2">
+      <div class="persona">
+        <div class="persona-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-user"/></svg></span>
+          <span class="tag">First-time adopter</span>
+        </div>
+        <h4>Range anxiety, running costs</h4>
+        <p>Needs hard numbers — real-world range, charging cost vs. petrol, total cost of ownership — before trust replaces doubt.</p>
+      </div>
+      <div class="persona">
+        <div class="persona-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+          <span class="tag">Performance upgrader</span>
+        </div>
+        <h4>Coming from petrol, wants proof</h4>
+        <p>Cares about performance data and community proof: rider reviews, comparison numbers, what people like them actually chose.</p>
+      </div>
+      <div class="persona">
+        <div class="persona-head">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></span>
+          <span class="tag">Urban commuter</span>
+        </div>
+        <h4>Financing clarity, daily efficiency</h4>
+        <p>Wants the boring-but-decisive details: EMI options, real-world efficiency, day-to-day running cost in their own city.</p>
+      </div>
+    </div>
+    <p class="doc-note rv d3" style="margin-top:18px">One sequence couldn't serve all three — and it wasn't.</p>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Three journeys, <span class="serif">one voice.</span></h2>
+    <p class="doc-p rv d1">Three distinct nurture journeys were built across email and WhatsApp, each triggered by the vehicle model tested and the buyer profile behind it. Running seven to twelve days post-test-drive, every touchpoint was mapped to the specific doubts that tend to peak in that window.</p>
+    <p class="doc-p rv d1"><b>Email carried the rational case</b> — owner testimonials, cost-of-ownership breakdowns, range data from riders in similar use cases. <b>WhatsApp carried the emotional one</b> — a short video of the exact model test-ridden, brand content, a direct line to a product advisor for live questions. All of it written in the brand's own voice: confident, direct, genuinely useful.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-user"/></svg></span>
+          <div><b>First-time adopter</b><span>Test-rode the entry model</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Day 1 · Email — cost breakdown</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 4 · WhatsApp — model video</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 9 · Advisor line opens</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span>
+          <div><b>Performance upgrader</b><span>Coming from petrol</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Day 1 · Email — performance data</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 5 · WhatsApp — community proof</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 10 · Advisor line opens</span>
+        </div>
+      </div>
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-target"/></svg></span>
+          <div><b>Urban commuter</b><span>Daily-use, financing-led</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step">Day 1 · Email — EMI &amp; efficiency</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 6 · WhatsApp — city-use video</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step">Day 12 · Advisor line opens</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mockups: what the buyer actually saw -->
+  <div class="wrap" style="margin-top:56px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">The rational case, in their inbox</h3>
+    <p class="fig-desc">Cost-of-ownership breakdown, performance data, financing clarity — each persona got the version that answered their actual question.</p>
+    <div class="fig-grid rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">inbox — 1 new message</div></div>
+          <div class="screen">
+            <div class="mockup-email">
+              <div class="em-head">
+                <div class="em-from"><span class="av">EV</span><div><b>Team, Revolt</b><span>What your first month actually costs</span></div></div>
+                <span class="em-when">Day 3</span>
+              </div>
+              <div class="em-subject">Your running cost, worked out — model you rode included</div>
+              <div class="em-body">
+                <p>Hi Rahul — since your test ride on the S1, a few people asked us the same question: what does it really cost to run this, month to month?</p>
+                <p>We broke it down against your daily commute. Charging vs. fuel, servicing, and where most owners break even.</p>
+                <a class="em-cta">See your cost breakdown →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><span class="tag" style="margin-bottom:0">First-time adopter</span></div>
+      </div>
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">inbox — 1 new message</div></div>
+          <div class="screen">
+            <div class="mockup-email">
+              <div class="em-head">
+                <div class="em-from"><span class="av">EV</span><div><b>Team, Revolt</b><span>Numbers, not adjectives</span></div></div>
+                <span class="em-when">Day 5</span>
+              </div>
+              <div class="em-subject">0–60 vs. your old petrol — the numbers side by side</div>
+              <div class="em-body">
+                <p>Hi Naveen — you asked how the S1 actually compares on performance. Here's the acceleration, top speed and torque data, plus what riders switching from a 150cc are saying.</p>
+                <a class="em-cta">See the comparison →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><span class="tag" style="margin-bottom:0">Performance upgrader</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:52px">
+    <h3 class="fig-title" style="font-size:clamp(19px,2.1vw,25px)">The emotional nudge, where they already are</h3>
+    <p class="fig-desc">A short video of the exact model tested, then a direct line to a human advisor for the questions email can't answer.</p>
+    <div class="fig-grid rv d3">
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">WhatsApp — Revolt Advisor</div></div>
+          <div class="screen">
+            <div class="mockup-chat" data-animate>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">Hey Rahul 👋 saw you rode the S1 in graphite grey on Saturday — here's a 20s clip of that exact bike on your usual route to work.</div>
+              </div>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">🎥 S1_graphite_commute-cut.mp4</div>
+              </div>
+              <div class="chat-msg out">
+                <div class="bub">That's actually really helpful — what's the wait time on this colour?</div>
+              </div>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">3 weeks from booking. Want me to connect you to your local advisor to lock the slot?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>84% open rate</b>&nbsp;·&nbsp;26% reply rate</div>
+      </div>
+      <div class="fig">
+        <div class="mockup-browser">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">WhatsApp — Revolt Advisor</div></div>
+          <div class="screen">
+            <div class="mockup-chat" data-animate>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">Hi Priya — quick one: here's what three commuters in your city are actually paying to charge vs. what you were quoted for petrol.</div>
+              </div>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">📊 real-world-efficiency_your-city.pdf</div>
+              </div>
+              <div class="chat-msg out">
+                <div class="bub">Ok this is lower than I thought. Can someone talk me through the EMI options?</div>
+              </div>
+              <div class="chat-msg">
+                <span class="av"></span>
+                <div class="bub">Yes — looping in your advisor now, they'll call in the next hour.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fig-cap"><b>Routed to:</b> local advisor, same day</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      “The consideration stage, once the brand's biggest leak, became a structured asset.”
+      <cite>Engagement summary — 90-day review</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">From leak <span class="serif">to loop.</span></h2>
+    <p class="doc-lede rv d1">Ninety days after the first journey went live, the brand's biggest leak had become a structured, measurable asset.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">51%</div>
+        <div class="rh-sub">Post-test-drive conversion, up from 34%</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Cancellations cut by 31%<span>In the two-week post-test-drive consideration window.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>84% WhatsApp open rate<span>With a 26% reply rate on the product-advisor prompt.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>Sales gets a feedback loop<span>Advisor replies now sharpen the closing conversation too.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">One generic sequence. No channel beyond email. No signal on who was cooling off, or why.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Three personalised journeys across Email + WhatsApp. Every drop-off point visible. Advisors looped in at the right moment, automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Got a stage where <span class="serif">buyers go quiet?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map where your funnel is leaking and what a personalised journey could look like — yours to keep either way.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-abm-video-ai.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

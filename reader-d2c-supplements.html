@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — D2C Multivitamins, Search Ads Multi-Gains | TalkXO</title>
+<meta name="description" content="Performance marketing case study for a D2C supplements brand — a two-pillar growth plan built on real customer cohort research, a Google Search campaign that returned 5.5X ROI, and a landing page that turned non-buyers into 2,000+ new followers instead of lost visitors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — D2C supplements: warm amber/yellow, overriding the default TalkXO blue for this page only */
+    --blue:#c99a1e; --blue-ink:#8a6a10;
+  }
+  .hero-photo{
+    position:relative;min-height:clamp(220px,34vw,360px);margin-top:44px;overflow:hidden;
+    background:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:clamp(28px,4vw,52px);
+  }
+  .hero-photo .hp-copy{color:var(--paper-on-ink);max-width:36ch}
+  .hero-photo .hp-copy .label{color:var(--dim-inv);margin-bottom:14px}
+  .hero-photo .hp-copy h5{font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.3;letter-spacing:-.01em;color:var(--paper-on-ink)}
+  .hero-photo .hp-copy h5 b{font-weight:900;color:var(--blue)}
+  .hero-photo .hp-mark{flex-shrink:0;width:clamp(90px,14vw,160px);height:clamp(90px,14vw,160px);border-radius:50%;border:1px solid var(--hair-inv);display:flex;align-items:center;justify-content:center}
+  .hero-photo .hp-mark .icon{width:40%;height:40%;color:var(--blue)}
+
+  /* ============ COHORT FLOAT (overlapping, gently drifting persona cards) ============ */
+  .cohort-float{position:relative;min-height:460px;margin:0 auto;max-width:720px}
+  .cohort-card{
+    position:absolute;width:min(250px,72vw);background:var(--paper);border:1px solid var(--hair-2);
+    border-radius:12px;padding:20px 20px 18px;box-shadow:var(--shadow-doc);
+    animation:cohort-drift 7.5s ease-in-out infinite;
+  }
+  .cohort-card .cc-avatar{
+    width:42px;height:42px;border-radius:50%;background:var(--blue-10);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+  }
+  .cohort-card .cc-avatar .icon{width:20px;height:20px;color:var(--blue-ink)}
+  .cohort-card h5{font-size:14px;font-weight:800;letter-spacing:-.01em}
+  .cohort-card .cc-meta{font-size:11px;color:var(--ink-40);font-weight:500;margin-top:2px;margin-bottom:13px;line-height:1.5}
+  .cohort-card .tags{gap:6px}
+  .cohort-card .tag{font-size:9px;padding:3px 8px;letter-spacing:.02em}
+  .cohort-card.c1{left:2%;top:6%;--rot:-4deg;transform:rotate(var(--rot));z-index:1;animation-delay:0s}
+  .cohort-card.c2{left:32%;top:32%;--rot:2deg;transform:rotate(var(--rot));z-index:3;animation-delay:1.4s}
+  .cohort-card.c3{left:12%;top:58%;--rot:-2deg;transform:rotate(var(--rot));z-index:2;animation-delay:2.8s}
+  @keyframes cohort-drift{
+    0%,100%{translate:0 0}
+    50%{translate:0 -14px}
+  }
+  @media(max-width:640px){
+    .cohort-float{min-height:0;display:flex;flex-direction:column;gap:18px;align-items:center}
+    .cohort-card{position:static;width:100%;max-width:340px;animation:none;transform:none}
+  }
+
+  /* ============ KEYWORD RAIN (dimmed keyword drift, Google Search winners glowing) ============ */
+  .kw-rain{
+    position:relative;overflow:hidden;width:min(460px,100%);aspect-ratio:1/1;margin:0;border-radius:10px;
+    background:var(--ink);border:1px solid var(--hair-inv);
+  }
+  .kw-rain::before{
+    content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(180deg,var(--ink) 0%,transparent 20%,transparent 82%,var(--ink) 100%);
+  }
+  .kw-rain .kw-legend{
+    position:absolute;inset:0 0 auto 0;z-index:3;display:flex;flex-wrap:wrap;gap:6px 14px;
+    padding:14px 16px 20px;background:linear-gradient(180deg,var(--ink) 55%,transparent 100%);
+    font-family:var(--mono);font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--dim-inv);
+  }
+  .kw-rain .kw-legend span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .kw-rain .kw-legend i{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+  .kw-rain .kw-legend .lg-good i{background:#7ee8a8;box-shadow:0 0 6px #7ee8a8}
+  .kw-rain .kw-legend .lg-bad i{background:#ff9c9c;box-shadow:0 0 6px #ff9c9c}
+  .kw{
+    position:absolute;top:-30px;left:0;white-space:nowrap;max-width:min(78%,240px);overflow:hidden;text-overflow:ellipsis;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.01em;color:var(--dim-inv);
+    padding:5px 11px;border:1px solid var(--hair-inv);border-radius:20px;
+    opacity:0;--peak:.4;
+    animation:kw-fall linear infinite;
+  }
+  .kw.good{color:#8ff0b4;border-color:rgba(126,232,168,.55);box-shadow:0 0 16px rgba(126,232,168,.5);font-weight:700;--peak:1}
+  .kw.bad{color:#ffabab;border-color:rgba(255,140,140,.5);box-shadow:0 0 16px rgba(255,120,120,.42);font-weight:700;--peak:1}
+  @keyframes kw-fall{
+    0%{transform:translateY(0);opacity:0}
+    12%{opacity:var(--peak)}
+    88%{opacity:var(--peak)}
+    100%{transform:translateY(490px);opacity:0}
+  }
+  @media(max-width:520px){.kw-rain{width:min(320px,90vw)}.kw{font-size:9.5px;max-width:70%}}
+
+  /* page-local: stack src above path, both left-aligned to match the text column's left edge */
+  .journey-row{grid-template-columns:1fr;gap:10px}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#insight">Insight</a>
+      <a href="#solution">Solution</a>
+      <a href="#results">Results</a>
+    </div>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse case studies
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-travel-performance-marketing.html"><span class="cm-tag">Performance marketing · Travel</span><span class="cm-title">Sell the family, not the traveller</span></a>
+        <a href="reader-realestate-retention.html"><span class="cm-tag">Sentiment management · Real estate</span><span class="cm-title">Real estate sentiment management, done right</span></a>
+        <a href="reader-cx-platform-guides.html"><span class="cm-tag">AI customer service · SaaS</span><span class="cm-title">The guide that sells without selling</span></a>
+        <a href="reader-taxfirm-free-tools.html"><span class="cm-tag">Accounting &amp; tax · Content tools</span><span class="cm-title">Built for the search right after the notice</span></a>
+        <a class="cm-all" href="index.html">See all case studies →</a>
+        <a class="cm-all" href="gallery.html">See gallery →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <div class="sn-list">
+    <a href="#problem"><span class="dot"></span><span class="txt">Problem</span></a>
+    <a href="#insight"><span class="dot"></span><span class="txt">Insight</span></a>
+    <a href="#solution"><span class="dot"></span><span class="txt">Solution</span></a>
+    <a href="#results"><span class="dot"></span><span class="txt">Results</span></a>
+  </div>
+  <div class="sn-jump">
+    <button type="button" data-jump="prev" aria-label="Previous section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(-90 12 12)"/></svg></button>
+    <button type="button" data-jump="next" aria-label="Next section"><svg class="icon"><use href="assets/icons.svg#i-arrow-right" transform="rotate(90 12 12)"/></svg></button>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">D2C MULTIVITAMINS, <span class="serif">search ads multi-gains.</span></h1>
+    <p class="doc-dek rv d1">A D2C supplements brand needed to win trust in a category with zero brand loyalty, where referrals decide more than ads do. Built on three detailed customer cohorts and a two-pillar growth plan, the Google Search campaign alone returned 5.5X on media spend — and the landing page itself stopped treating a non-buyer as a lost visitor, growing the brand's social following past 2,000 as the byproduct of a single engagement contest.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>D2C supplements brand</dd></div>
+      <div><dt>Category</dt><dd>Performance marketing</dd></div>
+      <div><dt>Channels</dt><dd>Google Search + Meta</dd></div>
+      <div><dt>Result</dt><dd>5.5X ROI</dd></div>
+    </dl>
+  </div>
+  <div class="wrap hero-photo rv d3">
+    <div class="hp-copy">
+      <span class="label">The objective</span>
+      <h5>Build trust in a category with <b>zero brand loyalty</b> — and give every visitor an outcome, whether they buy today or not.</h5>
+    </div>
+    <div class="hp-mark">
+      <svg class="icon"><use href="assets/icons.svg#i-target"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HEADLINE STATS ================= -->
+<section class="doc-section rv" style="padding-top:clamp(40px,6vh,64px)">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num"><span data-count="5.5" data-suffix="X">0X</span></div>
+        <div class="lbl">ROI, on the Google Search campaign</div>
+      </div>
+      <div class="stat">
+        <div class="num">2,<span data-count="000" data-suffix="+">0+</span></div>
+        <div class="lbl">New followers, from one engagement contest</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="4">0</span></div>
+        <div class="lbl">Landing page types, built and tested</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span data-count="3">0</span></div>
+        <div class="lbl">Customer cohorts, mapped in depth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="doc-section" id="problem">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">01 — The problem</span>
+    <h2 class="doc-h2 rv">A category built on <span class="serif">no loyalty at all.</span></h2>
+    <p class="doc-lede rv d1">Supplements buyers don't stay for a brand — they stay for whoever referred them. The category was already crowded with recognisable names, and this brand needed to win first-time trust on a fraction of their media budgets.</p>
+    <p class="doc-p rv d2">Customer research confirmed it early: no brand loyalty, a heavy reliance on referrals, and limited appeal to any one platform. The one real hook available was blunt and simple — great quality, the right price, and proven results — but nothing in the acquisition setup was built to prove any of the three before asking for the sale.</p>
+    <p class="doc-p rv d2">And every landing page had the same blind spot: a visitor who wasn't ready to buy today simply left, and left with nothing. No follow, no follow-up, no reason to come back when they were ready.</p>
+  </div>
+</section>
+
+<!-- ================= INSIGHT ================= -->
+<section class="doc-section" id="insight">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">02 — The insight</span>
+    <h2 class="doc-h2 rv">Know the cohort, <span class="serif">before you spend on it.</span></h2>
+    <p class="doc-p rv d1">Instead of one generic "fitness enthusiast" persona, the research mapped real behavioural cohorts — how social they are, whether they chase quality or price, how well the product actually fits their routine, and whether they discover brands themselves or need a referral to trust one. Media, creative, and offer all followed from where a cohort actually sat on those lines, not from a guess.</p>
+  </div>
+  <div class="wrap" style="margin-top:8px">
+    <div class="cohort-float rv d2">
+      <div class="cohort-card c1">
+        <div class="cc-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+        <h5>IT professional, Gurugram</h5>
+        <div class="cc-meta">38 y/o · switching from an established brand</div>
+        <div class="tags"><span class="tag">Sociable</span><span class="tag">Fitness videos</span><span class="tag">Most active on Instagram</span></div>
+      </div>
+      <div class="cohort-card c2">
+        <div class="cc-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+        <h5>MBA student, Pune</h5>
+        <div class="cc-meta">22 y/o · deal-driven, price-sensitive</div>
+        <div class="tags"><span class="tag">Driven by deals</span><span class="tag">Self-help content</span><span class="tag">Most active on YouTube</span></div>
+      </div>
+      <div class="cohort-card c3">
+        <div class="cc-avatar"><svg class="icon"><use href="assets/icons.svg#i-users"/></svg></div>
+        <h5>Digital marketer, Lucknow</h5>
+        <div class="cc-meta">27 y/o · goal-based fitness programme</div>
+        <div class="tags"><span class="tag">D2C savvy</span><span class="tag">Review seeker</span><span class="tag">Most active on Reels</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap-doc">
+    <blockquote class="pull rv" style="margin-top:56px">
+      "No brand loyalty. Referrals are a big deal. The hook was never the brand name — it was great quality, the right price, and proven results."
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= SOLUTION ================= -->
+<section class="doc-section" id="solution">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">03 — The solution</span>
+    <h2 class="doc-h2 rv">Two pillars: <span class="serif">be trusted, then be found.</span></h2>
+    <p class="doc-p rv d1">Perception Building did the trust work — content filtered through one question, "will a fitness enthusiast relate to it?", every product linked and tagged so interest never hit a dead end, and visibility aimed at people already consuming fitness content, not a cold audience. Powerplay Campaigns did the acquisition work — paid media strategically focused on the channels and offers most likely to convert each cohort.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="info-grid rv d2">
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-zap"/></svg></span></div>
+        <h4>BTE landing page</h4>
+        <p>"Before The Explanation" — leads with the outcome, for cohorts who decide fast.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-star"/></svg></span></div>
+        <h4>Flagship SKU page</h4>
+        <p>One hero product, fully explained — for cohorts who research before buying.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-check"/></svg></span></div>
+        <h4>Social proof page</h4>
+        <p>Reviews and results up front — for the referral-driven, trust-first cohort.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-head"><span class="ic"><svg class="icon"><use href="assets/icons.svg#i-clock"/></svg></span></div>
+        <h4>Instant sale / offer page</h4>
+        <p>Price-led, urgency-led — for the deal-driven cohort that needs a reason today.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:52px">
+    <h3 class="doc-h3" style="margin-top:0">Why Google Search pulled ahead of everything else</h3>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:28px">
+    <div class="kw-rain rv d2">
+      <div class="kw-legend">
+        <span class="lg-good"><i></i>Google Search leaned in</span>
+        <span class="lg-bad"><i></i>High-bid, low-conversion</span>
+      </div>
+      <span class="kw" style="left:3%;animation-duration:12s;animation-delay:-1s">multivitamin</span>
+      <span class="kw good" style="left:12%;animation-duration:14s;animation-delay:-9s">daily energy</span>
+      <span class="kw" style="left:24%;animation-duration:10s;animation-delay:-4s">biotin</span>
+      <span class="kw bad" style="left:34%;animation-duration:15s;animation-delay:-13s">cheapest price</span>
+      <span class="kw" style="left:46%;animation-duration:11s;animation-delay:-6s">vitamin d3</span>
+      <span class="kw good" style="left:56%;animation-duration:13s;animation-delay:-2s">hair growth</span>
+      <span class="kw" style="left:68%;animation-duration:16s;animation-delay:-11s">omega 3</span>
+      <span class="kw bad" style="left:78%;animation-duration:12s;animation-delay:-5s">free samples</span>
+      <span class="kw" style="left:6%;animation-duration:15s;animation-delay:-16s">ashwagandha</span>
+      <span class="kw good" style="left:18%;animation-duration:11s;animation-delay:-7s">best multivitamin</span>
+      <span class="kw" style="left:30%;animation-duration:14s;animation-delay:-3s">zinc</span>
+      <span class="kw bad" style="left:40%;animation-duration:10s;animation-delay:-14s">brand comparison</span>
+      <span class="kw" style="left:52%;animation-duration:13s;animation-delay:-8s">immunity booster</span>
+      <span class="kw good" style="left:62%;animation-duration:16s;animation-delay:-0s">d3 deficiency</span>
+      <span class="kw" style="left:74%;animation-duration:12s;animation-delay:-10s">magnesium</span>
+      <span class="kw bad" style="left:76%;animation-duration:14s;animation-delay:-4s">generic store</span>
+    </div>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:28px">
+    <p class="doc-p">Every channel was bidding into the same flood of category search terms — multivitamins, biotin, vitamin D3, a hundred variations of the same handful of concerns. Most of it was noise: generic terms, price-shoppers, searches that cost more than they ever converted. Google Search's edge wasn't more budget — it was walking away from that noise and leaning hard into the small set of terms that actually paid back. That discipline is most of the reason the channel alone returned 5.5X.</p>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:52px">
+    <h3 class="doc-h3" style="margin-top:0">The exit that wasn't a bounce</h3>
+    <p class="doc-p">Every one of those four pages fed the same funnel — visitor to subscriber to engaged to buyer to advocate — but the real fix sat at the point most funnels ignore: the non-buyer. Instead of a dead end, the exit became an engagement contest, asking for a follow instead of a card number. Media mix stayed simple and accountable — 30% YouTube, 30% Google Search, 30% Facebook, 10% remarketing, reweighted as results came in.</p>
+  </div>
+
+  <div class="wrap-doc" style="margin-top:32px">
+    <div class="journey rv d2">
+      <div class="journey-row">
+        <div class="journey-src">
+          <span class="ic"><svg class="icon"><use href="assets/icons.svg#i-workflow"/></svg></span>
+          <div><b>Customer journey</b><span>Every touchpoint, mapped</span></div>
+        </div>
+        <div class="journey-path">
+          <span class="journey-step blue">Visitor</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step blue">Subscriber</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step blue">Engaged</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step blue">Buyer</span>
+          <svg class="icon journey-arrow"><use href="assets/icons.svg#i-arrow-right"/></svg>
+          <span class="journey-step blue">Advocate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="doc-section" id="results">
+  <div class="wrap-doc">
+    <span class="label doc-kicker rv">04 — The results</span>
+    <h2 class="doc-h2 rv">5.5X back, <span class="serif">and an audience that stayed.</span></h2>
+    <p class="doc-lede rv d1">The Google Search campaign alone returned 5.5X on media spend. And because the landing page gave non-buyers somewhere real to go, the brand closed with something a pure sales funnel never would have: over 2,000 new followers, and a cohort system built to keep getting sharper.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:32px">
+    <div class="result-highlight rv d2">
+      <div>
+        <div class="rh-num">5.5X</div>
+        <div class="rh-sub">ROI, on the Google Search campaign</div>
+      </div>
+      <ul class="result-checklist">
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>2,000+ new followers, from one contest<span>A non-transacting exit that turned a bounce into an audience, not a loss.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>4 landing pages, matched to 4 buying styles<span>BTE, flagship SKU, social proof, and instant offer — each one built for a specific cohort, not a generic visitor.</span></div>
+        </li>
+        <li>
+          <svg class="icon"><use href="assets/icons.svg#i-check-circle"/></svg>
+          <div>A cohort system built to compound<span>Three behavioural cohorts mapped in depth, feeding every media and creative decision that followed.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:40px">
+    <div class="compare rv d3">
+      <div class="side before">
+        <span class="k">Before</span>
+        <p class="doc-p" style="max-width:none">One generic audience, one landing page, and a visitor who left with nothing if they didn't buy on the first visit.</p>
+      </div>
+      <div class="side after">
+        <span class="k">After</span>
+        <p class="doc-p" style="max-width:none">Three mapped cohorts, four matched landing pages, and an exit that turns a non-buyer into a follower instead of a loss.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Losing visitors <span class="serif">who don't buy today?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll map what your funnel currently does with a non-buyer — and what it could do instead.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Case%20study%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="foot-links">
+      <a href="reader-travel-performance-marketing.html">Next case study →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

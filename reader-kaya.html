@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Kaya Skin Clinic Website Design | TalkXO</title>
+<meta name="description" content="Website design case study for Kaya Skin Clinic — modernising a 20-year dermatology brand for a younger audience, with booking as the primary funnel, an AI skin-analysis tool as the engagement hook, and retail as a secondary door, without losing the clinical credibility underneath it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — Kaya Skin Clinic: warm coral/terracotta, overriding the default TalkXO blue for this page only */
+    --blue:#c1622f; --blue-ink:#8f4520;
+  }
+  .doc-title .serif{color:var(--blue-ink)}
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/851; background-image:url('assets/img/kaya/k1_hero.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/654; background-image:url('assets/img/kaya/k2_concern.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/697; background-image:url('assets/img/kaya/k3_credibility.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1800/1204;background-image:url('assets/img/kaya/k4_services.jpg')}
+  .shot-item[data-n="5"] .shot{aspect-ratio:1800/622; background-image:url('assets/img/kaya/k5_ai.jpg')}
+  .shot-item[data-n="6"] .shot{aspect-ratio:1800/687; background-image:url('assets/img/kaya/k6_shop.jpg')}
+  .shot-item[data-n="7"] .shot{aspect-ratio:1800/1202;background-image:url('assets/img/kaya/k7_footer.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-effy-ai.html"><span class="cm-tag">Website design · HR tech / SaaS</span><span class="cm-title">Show the product. Name the competitor.</span></a>
+        <a href="reader-copy-chain.html"><span class="cm-tag">Product design · AI tooling</span><span class="cm-title">Copywriting, mapped not chatted</span></a>
+        <a href="reader-stock-portfolio-app.html"><span class="cm-tag">Product design · Fintech</span><span class="cm-title">A portfolio you can actually read</span></a>
+        <a href="reader-frex-challenge.html"><span class="cm-tag">Website design · Education · Space science</span><span class="cm-title">A call for research, staged like a launch</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">MODERN, WITHOUT LOSING <span class="serif">the white coat.</span></h1>
+    <p class="doc-dek rv d1">Kaya Skin Clinic needed to look like a brand a 25-year-old would trust — without losing what actually built the business: twenty years of dermatology expertise. Booking stays the primary ask, an AI skin-analysis tool exists to pull in people who aren't ready to book yet, and the product shop is a secondary door — all inside a design that's clean and current, built from familiar patterns rather than anything experimental, so the clinical credibility underneath it never gets diluted.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>Kaya Skin Clinic</dd></div>
+      <div><dt>Category</dt><dd>Website design</dd></div>
+      <div><dt>Scope</dt><dd>Full homepage design</dd></div>
+      <div><dt>Focus</dt><dd>Modern look, clinical trust</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">Kaya has been treating Indian skin since 2003 — real clinical expertise, real doctors, real legacy. The brief wasn't to reinvent that; it was to make it read current to a younger audience without diluting it. Booking stays the primary ask, an AI skin-analysis tool exists to pull in people who aren't ready to book yet, and the shop is a secondary line — built throughout from clean, familiar patterns rather than anything experimental. Below is that homepage, section by section, with the thinking behind each one.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The hero</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The booking form doesn't wait for a click.</h3>
+          <p>City, name, number, appointment — sitting directly in the hero, not behind a button. In a category where the whole job is getting someone from "looking" to "booked" before they change their mind, every extra step is a place to lose them.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · Start here</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Three doors, not one search bar.</h3>
+          <p>Skin, hair, body — the three ways a visitor actually thinks about their own concern, each one a full photo instead of a menu item, so "where do I start" never feels like guesswork.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · Twenty years, stated plainly</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Twenty years, four numbers, four pillars.</h3>
+          <p>Awards, clinic count, doctor count, technology — stated before the story is told. Then the story itself (built for Indian skin, since 2003) is backed by four concrete pillars instead of four adjectives.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · The services</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Every card ends the same way: book it.</h3>
+          <p>Laser hair reduction, Thermage, dermal fillers — each treatment gets what it needs to (what to expect, the results), and a clinic-tour video breaks up the grid instead of being its own separate detour.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="5">
+        <span class="shot-num">05 · The AI tool</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The hook, not a second business.</h3>
+          <p>The AI tool isn't a parallel product — it's the easiest way to pull in someone who isn't ready to book. A selfie is a lower-commitment ask than a phone number, and it still ends at the same place: get them into a consultation.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="6">
+        <span class="shot-num">06 · The shop</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>A second door, not a second identity.</h3>
+          <p>Filterable by concern — anti-aging, acne, dandruff — with price and product front and centre. It's real retail revenue for a clinic this size, positioned after the clinical sections instead of competing with them.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="7">
+        <span class="shot-num">07 · The footer</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">Kaya Skin Clinic</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Everything findable, nothing shouted.</h3>
+          <p>Services and popular concerns get their own separate columns instead of being crammed into one link list — useful for the visitor who scrolled straight to the bottom looking for one specific treatment.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Need to look modern <span class="serif">without losing your credibility?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at whether your redesign is keeping pace with a younger audience, or trading away the trust that built the business.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

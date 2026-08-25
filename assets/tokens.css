@@ -1,0 +1,57 @@
+/*
+  TalkXO Case Studies — design tokens
+  Shared across every case study page. Matches the brand established
+  in /breeze/index.html (paper/ink editorial system, blue accent).
+  Do not duplicate these values into a page — only add page-specific
+  overrides scoped under that page's own class.
+*/
+:root{
+  /* surfaces */
+  --paper:#faf9f7;
+  --paper-2:#f3f2ef;
+  --paper-3:#ececE8;
+
+  /* ink (text) */
+  --ink:#16140f;
+  --ink-60:rgba(22,20,15,.62);
+  --ink-40:rgba(22,20,15,.4);
+
+  /* hairlines */
+  --hair:rgba(22,20,15,.16);
+  --hair-2:rgba(22,20,15,.28);
+
+  /* accent */
+  --blue:#2230ff;
+  --blue-ink:#1a25c4;
+  --blue-10:rgba(34,48,255,.08);
+  --blue-16:rgba(34,48,255,.16);
+
+  /* dark surface (used inside inverted panels: terminals, feature blocks) */
+  --dark:#100f0b;
+  --paper-on-ink:#efe9da;
+  --hair-inv:rgba(239,233,218,.16);
+  --dim-inv:rgba(239,233,218,.55);
+
+  /* semantic (results/status — used sparingly, in mono uppercase) */
+  --good:#2f8f5b;
+  --good-bg:rgba(47,143,91,.1);
+  --warn:#a6650a;
+  --warn-bg:rgba(166,101,10,.1);
+  --bad:#c23c2b;
+  --bad-bg:rgba(194,60,43,.1);
+
+  /* type */
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Schibsted Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  /* rhythm */
+  --measure:66ch;
+  --radius:2px;
+  --shadow-doc:5px 7px 0 rgba(22,20,15,.09);
+  --shadow-doc-blue:5px 7px 0 rgba(34,48,255,.14);
+
+  /* motion */
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-pop:cubic-bezier(.2,1.4,.4,1);
+}

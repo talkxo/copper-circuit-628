@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — City Apartments Website Design | TalkXO</title>
+<meta name="description" content="Website design case study for City Apartments, a premium serviced-apartments operator in the City of London — a homepage built to prove scale, credibility, and hospitality before the pitch even starts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  :root{
+    /* brand theme — City Apartments: warm brown/black, overriding the default TalkXO blue for this page only */
+    --blue:#6b4023; --blue-ink:#4a2c18;
+  }
+  .doc-title .serif{color:var(--blue-ink)}
+  .shot-item[data-n="1"] .shot{aspect-ratio:1800/582; background-image:url('assets/img/city-apartments/t1_hero.jpg')}
+  .shot-item[data-n="2"] .shot{aspect-ratio:1800/423; background-image:url('assets/img/city-apartments/t2_cards.jpg')}
+  .shot-item[data-n="3"] .shot{aspect-ratio:1800/1115;background-image:url('assets/img/city-apartments/t3_tagline.jpg')}
+  .shot-item[data-n="4"] .shot{aspect-ratio:1800/824; background-image:url('assets/img/city-apartments/t4_feature.jpg')}
+  .shot-item[data-n="5"] .shot{aspect-ratio:1800/668; background-image:url('assets/img/city-apartments/t5_stats.jpg')}
+  .shot-item[data-n="6"] .shot{aspect-ratio:1800/823; background-image:url('assets/img/city-apartments/t6_ando.jpg')}
+  .shot-item[data-n="7"] .shot{aspect-ratio:1800/973; background-image:url('assets/img/city-apartments/t7_news.jpg')}
+  .shot-item[data-n="8"] .shot{aspect-ratio:1800/429; background-image:url('assets/img/city-apartments/t8_cta.jpg')}
+  .shot-item[data-n="9"] .shot{aspect-ratio:1800/523; background-image:url('assets/img/city-apartments/t9_footer.jpg')}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="case-menu">
+      <button class="case-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Browse gallery
+        <svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="case-menu-panel">
+        <a href="reader-kaya.html"><span class="cm-tag">Website design · Dermatology &amp; skincare</span><span class="cm-title">Modern, without losing the white coat</span></a>
+        <a href="reader-effy-ai.html"><span class="cm-tag">Website design · HR tech / SaaS</span><span class="cm-title">Show the product. Name the competitor.</span></a>
+        <a href="reader-copy-chain.html"><span class="cm-tag">Product design · AI tooling</span><span class="cm-title">Copywriting, mapped not chatted</span></a>
+        <a href="reader-stock-portfolio-app.html"><span class="cm-tag">Product design · Fintech</span><span class="cm-title">A portfolio you can actually read</span></a>
+        <a class="cm-all" href="gallery.html">See all gallery →</a>
+        <a class="cm-all" href="index.html">See case studies →</a>
+      </div>
+    </div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<!-- ================= COVER ================= -->
+<header class="doc-header">
+  <div class="wrap-doc">
+    <h1 class="doc-title rv">PROVE IT, <span class="serif">before you pitch it.</span></h1>
+    <p class="doc-dek rv d1">City Apartments needed a homepage that could carry a premium price in a category built on trust — real buildings, real scale, a real person to talk to. Every section stacks one more piece of proof before the site ever asks for the enquiry.</p>
+    <dl class="doc-meta rv d2">
+      <div><dt>Client</dt><dd>City Apartments</dd></div>
+      <div><dt>Category</dt><dd>Website design</dd></div>
+      <div><dt>Scope</dt><dd>Full homepage design</dd></div>
+      <div><dt>Focus</dt><dd>Credibility, stacked in order</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<section class="doc-section rv" style="padding-top:clamp(24px,4vh,44px)">
+  <div class="wrap-doc">
+    <p class="doc-p" style="max-width:70ch">City Apartments runs premium serviced apartments for business travellers in the City of London, now part of the Ando Living Group. The brief was to make a long, expensive stay feel like an easy decision — for a corporate travel buyer who's never met the team booking it. Below is that homepage, section by section, with the thinking behind each one.</p>
+  </div>
+</section>
+
+<section class="doc-section">
+  <div class="wrap">
+    <div class="shot-gallery">
+
+      <div class="shot-item rv" data-n="1">
+        <span class="shot-num">01 · The hero</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The claim, backed before it's made.</h3>
+          <p>Two proof points — 35 years of trusted service, 10,000+ happy customers — sit directly above the headline, not buried in an About page. By the time a visitor reads "we're your home," the credibility is already established.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="2">
+        <span class="shot-num">02 · The buildings</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The portfolio, not a promise.</h3>
+          <p>Four real buildings, four real addresses, right under the fold — because "premium serviced apartments" is an easier sell once you can see the actual front doors.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="3">
+        <span class="shot-num">03 · The reframe</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>One sentence answers the whole brief.</h3>
+          <p>A full-width pause between the proof and the pitch — one line that reframes "serviced apartments" as something more specific: a stay that's long, but doesn't feel like a compromise.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="4">
+        <span class="shot-num">04 · What they do</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Three answers to the same objection.</h3>
+          <p>In-house management, flexible corporate plans, apartments designed for longer stays — the three things a corporate travel buyer actually needs reassurance on, each earning one card, not one paragraph.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="5">
+        <span class="shot-num">05 · The scale, and a signature</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Numbers, then a name.</h3>
+          <p>Six hard numbers first — scale, tenure, accreditation — then a short note signed by the CEO, not a marketing team. The scale argument and the personal one sit side by side instead of competing.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="6">
+        <span class="shot-num">06 · The group</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The parent company, treated as an upgrade.</h3>
+          <p>Group ownership is framed as an expanded network — preferred rates and experiences across Europe — rather than a footnote, with its own photo grid instead of a single logo lockup.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="7">
+        <span class="shot-num">07 · The newsroom</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Proof the site is alive.</h3>
+          <p>A lightweight editorial section — accreditation news, sustainability, a corporate-stays explainer, the Ando announcement — signals a company still publishing, not a homepage frozen at launch.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="8">
+        <span class="shot-num">08 · The close</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>The close is a person, not a form.</h3>
+          <p>Real faces instead of a generic contact icon, next to a single link — "Tell us what you need" — phrased like a conversation starter, not a lead-capture CTA.</p>
+        </div>
+      </div>
+
+      <div class="shot-item rv" data-n="9">
+        <span class="shot-num">09 · The footer</span>
+        <div class="shot-frame">
+          <div class="chrome"><div class="dots"><i></i><i></i><i></i></div><div class="urlbar">City Apartments</div></div>
+          <div class="shot" oncontextmenu="return false"></div>
+        </div>
+        <div class="shot-cap">
+          <h3>Even the footer stays on-brand.</h3>
+          <p>Dark, quiet, and functional — sitemap, contact, social, and a newsletter signup — closing the page without introducing a single new idea.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="cta">
+  <div class="wrap cta-in">
+    <div>
+      <h2>Selling something that <span class="serif">needs trust before price?</span></h2>
+      <p class="cta-sub">Thirty minutes. We'll look at where your homepage is asking for the sale before it's earned it.</p>
+    </div>
+    <div class="cta-side">
+      <button class="mag" onclick="location.href='mailto:hello@talkxo.com?subject=Gallery%20follow-up'">Talk to us <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="gallery.html"><span class="sq"></span>TALKXO <em>/ gallery</em></a>
+    <div class="foot-links">
+      <a href="gallery.html">All gallery →</a>
+    </div>
+    <div class="foot-right">
+      <a href="mailto:hello@talkxo.com">hello@talkxo.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

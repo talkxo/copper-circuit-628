@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selected Work | TalkXO</title>
+<meta name="description" content="A selection of TalkXO's work — real projects, real results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:ital,wght@0,500;0,700;0,900;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/components.css">
+<style>
+  .index-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--hair)}
+  .index-row{
+    position:relative;display:grid;grid-template-columns:120px 1fr auto;gap:28px;align-items:center;
+    padding:46px 0;border-bottom:1px solid var(--hair);
+    text-decoration:none;color:inherit;
+  }
+  .index-row.more{display:none}
+  .index-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-ink)}
+  .index-title{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;max-width:34ch;transition:color .25s}
+  .index-row:hover .index-title{color:var(--blue)}
+  .index-sub{margin-top:8px;font-size:16px;color:var(--ink-60);font-weight:500;max-width:52ch}
+  .index-stat{font-family:var(--mono);font-size:12px;color:var(--ink-40);text-align:right;white-space:nowrap}
+  .index-stat b{color:var(--blue-ink);font-weight:600}
+  .load-more-wrap{display:flex;justify-content:center;padding:56px 0 64px}
+  @media(max-width:760px){.index-row{grid-template-columns:1fr}.index-stat{text-align:left}}
+  footer.site-foot .foot{justify-content:center;flex-direction:column;text-align:center;gap:10px}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav class="site-nav" id="nav">
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+    <div class="nav-links"><a href="gallery.html">Gallery →</a></div>
+    <a class="nav-cta" href="mailto:hello@talkxo.com">Start a project</a>
+  </div>
+</nav>
+
+<header class="doc-header" style="padding-bottom:0">
+  <div class="wrap">
+    <h1 class="doc-title rv" style="max-width:20ch">A SELECTION OF <span class="serif">our work.</span></h1>
+  </div>
+</header>
+
+<section class="doc-section" style="padding-top:44px">
+  <div class="wrap">
+    <div class="index-grid rv">
+      <a class="index-row" href="reader-d2c-supplements.html">
+        <span class="index-tag">Performance marketing · D2C</span>
+        <div>
+          <div class="index-title">D2C multivitamins, search ads multi-gains</div>
+          <p class="index-sub">A Google Search campaign returned 5.5X ROI for a D2C supplements brand — and a landing page redesign turned non-buyers into 2,000+ new followers instead of lost visitors.</p>
+        </div>
+        <div class="index-stat">ROI<br><b>5.5X</b></div>
+      </a>
+      <a class="index-row" href="reader-touchpoints-ev.html">
+        <span class="index-tag">EV &amp; mobility</span>
+        <div>
+          <div class="index-title">The follow-up that closes the sale</div>
+          <p class="index-sub">Personalised Email + WhatsApp journeys reduced post-test-drive cancellations for an EV brand.</p>
+        </div>
+        <div class="index-stat">Conversion<br><b>34% → 51%</b></div>
+      </a>
+      <a class="index-row" href="reader-abm-video-ai.html">
+        <span class="index-tag">Enterprise AI · sports media</span>
+        <div>
+          <div class="index-title">Your audience is out there. They just haven't stopped for you yet.</div>
+          <p class="index-sub">A segmented ABM drip architecture turned stalled pipeline into booked demos.</p>
+        </div>
+        <div class="index-stat">Demo bookings<br><b>↑ 38%</b></div>
+      </a>
+      <a class="index-row" href="reader-takara-biotech-crm.html">
+        <span class="index-tag">Biotech · CRM &amp; demand gen</span>
+        <div>
+          <div class="index-title">A lean funnel for a biotech leader</div>
+          <p class="index-sub">A low-investment, high-yield CRM funnel for a global biotech leader, built for a narrow expert audience of biotech educators and researchers.</p>
+        </div>
+        <div class="index-stat">Demand ROI<br><b>5X+</b></div>
+      </a>
+      <a class="index-row" href="reader-field-service-seo.html">
+        <span class="index-tag">B2B SaaS · SEO</span>
+        <div>
+          <div class="index-title">Found by trade, not by category</div>
+          <p class="index-sub">A field service management platform stopped fighting for one crowded keyword and mapped 43 trades against their own search behaviour instead.</p>
+        </div>
+        <div class="index-stat">Organic traffic<br><b>5X</b></div>
+      </a>
+      <a class="index-row" href="reader-hair-clinic-journey.html">
+        <span class="index-tag">Healthcare · Lifecycle automation</span>
+        <div>
+          <div class="index-title">Still there at month nine</div>
+          <p class="index-sub">A 12-month patient journey mapped stage by stage for an Australia-based hair restoration clinic, so no one goes quiet after the sale.</p>
+        </div>
+        <div class="index-stat">Journey mapped<br><b>12 mo</b></div>
+      </a>
+      <a class="index-row more" href="reader-creator-platform-youtube.html">
+        <span class="index-tag">Creator economy · SaaS</span>
+        <div>
+          <div class="index-title">The leads that never searched</div>
+          <p class="index-sub">A YouTube-first content strategy met creators before they were shopping for software — and qualified at twice the rate search did.</p>
+        </div>
+        <div class="index-stat">Lead qualification<br><b>2X</b></div>
+      </a>
+      <a class="index-row more" href="reader-ecommerce-content-warehouse.html">
+        <span class="index-tag">E-commerce · Content &amp; SEO</span>
+        <div>
+          <div class="index-title">Built to outlast the campaign</div>
+          <p class="index-sub">A full-funnel content warehouse for an e-commerce fraud &amp; RTO platform, weighted to where real buyer volume sits and built to compound, not expire.</p>
+        </div>
+        <div class="index-stat">Content cadence<br><b>76 → 144</b></div>
+      </a>
+      <a class="index-row more" href="reader-taxfirm-free-tools.html">
+        <span class="index-tag">Accounting &amp; tax · Content tools</span>
+        <div>
+          <div class="index-title">Built for the search right after the notice</div>
+          <p class="index-sub">14 free, no-signup tax tools mapped to the real triggers that send people searching — an IRS notice, an unexpected 1099, a filing deadline.</p>
+        </div>
+        <div class="index-stat">Bounce rate<br><b>81% → 39%</b></div>
+      </a>
+      <a class="index-row more" href="reader-cx-platform-guides.html">
+        <span class="index-tag">AI customer service · SaaS</span>
+        <div>
+          <div class="index-title">The guide that sells without selling</div>
+          <p class="index-sub">Practitioner-grade gated guides for an AI customer service platform, built to rank for what e-commerce sellers and CX leaders actually search — not another feature page.</p>
+        </div>
+        <div class="index-stat">Flagship guides<br><b>2</b></div>
+      </a>
+      <a class="index-row more" href="reader-realestate-retention.html">
+        <span class="index-tag">Sentiment management · Real estate</span>
+        <div>
+          <div class="index-title">Real estate sentiment management, done right</div>
+          <p class="index-sub">A sentiment management system for Gurgaon's leading real estate developer, built to give delayed-project buyers somewhere real to be heard.</p>
+        </div>
+        <div class="index-stat">Negative sentiment<br><b>Held &lt;25%</b></div>
+      </a>
+      <a class="index-row more" href="reader-travel-performance-marketing.html">
+        <span class="index-tag">Performance marketing · Travel</span>
+        <div>
+          <div class="index-title">Sell the family, not the traveller</div>
+          <p class="index-sub">A Meta + Google model for a Singapore-based premium travel operator, repositioned around cost per family booking instead of cost per lead.</p>
+        </div>
+        <div class="index-stat">ROAS<br><b>12X</b></div>
+      </a>
+    </div>
+    <div class="load-more-wrap">
+      <button type="button" class="mag ghost" data-load-more>Load more <span class="arr">→</span></button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <a class="wordmark" href="index.html"><span class="sq"></span>TALKXO <em>/ case studies</em></a>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
