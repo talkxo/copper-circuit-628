@@ -43,7 +43,7 @@ nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:200;border-bottom:1px s
 nav.site-nav.scrolled{background:rgba(241,237,228,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--hair)}
 .nav-in{
   max-width:1180px;margin:0 auto;padding:18px clamp(20px,4vw,56px);
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;
 }
 /* Whatever sits second-to-last in the nav (nav-links, or a case-menu dropdown when
    nav-links isn't present) gets pushed flush against the last item — keeps the

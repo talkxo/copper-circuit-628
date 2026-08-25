@@ -358,8 +358,13 @@
 .case-menu-panel .cm-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-ink);display:block;margin-bottom:4px}
 .case-menu-panel .cm-title{font-size:13.5px;font-weight:700;letter-spacing:-.01em;display:block}
 .case-menu-panel a.cm-all{
-  text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-60);border-bottom:none;padding-top:12px;
+}
+.case-menu-panel a.cm-cta{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;border-bottom:none;
+  padding-top:12px;margin-top:4px;border-top:1px solid var(--hair);
 }
 
 /* ============ RESULT HIGHLIGHT (big number + checklist recap) ============ */

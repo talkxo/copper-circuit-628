@@ -17,34 +17,64 @@
   <link rel="stylesheet" href="assets/components.css">
   <style>
     /* brand theme — gallery: tags, dots, and links stay the same TalkXO blue used on the case-studies index.
-       Only the headline's serif span gets a moving red/purple gradient, below. */
+       The headline's last word ("works.") stays blue, and cycles through a handful of
+       different typefaces as a small attract-effect — lowercase while mid-cycle, back to
+       normal case whenever it lands on the default typeface. */
 
     .doc-title .serif {
-      background: linear-gradient(90deg, #2230ff, #7c3aed, #a855f7, #6d28d9, #2230ff);
-      background-size: 300% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: galleryWave 7s ease-in-out infinite;
+      color: var(--blue);
+      display: inline-block;
+      animation: galleryFontCycle 7s steps(1, end) infinite;
     }
 
-    @keyframes galleryWave {
-      0% {
-        background-position: 0% 50%;
+    @keyframes galleryFontCycle {
+      0%, 14% {
+        font-family: var(--sans);
+        font-style: normal;
+        text-transform: none;
       }
 
-      50% {
-        background-position: 100% 50%;
+      14.01%, 28% {
+        font-family: var(--serif);
+        font-style: italic;
+        text-transform: lowercase;
       }
 
-      100% {
-        background-position: 0% 50%;
+      28.01%, 42% {
+        font-family: var(--mono);
+        font-style: normal;
+        text-transform: lowercase;
+      }
+
+      42.01%, 56% {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: normal;
+        text-transform: lowercase;
+      }
+
+      56.01%, 70% {
+        font-family: cursive;
+        font-style: normal;
+        text-transform: lowercase;
+      }
+
+      70.01%, 84% {
+        font-family: fantasy;
+        font-style: normal;
+        text-transform: lowercase;
+      }
+
+      84.01%, 100% {
+        font-family: var(--sans);
+        font-style: normal;
+        text-transform: none;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .doc-title .serif {
         animation: none;
+        font-family: var(--sans);
       }
     }
 
@@ -71,8 +101,8 @@
 
   <header class="doc-header" style="padding-bottom:0">
     <div class="wrap">
-      <h1 class="doc-title rv" style="max-width:22ch">WE JUST LOVE DESIGN. <span class="serif">Design that
-          works.</span></h1>
+      <h1 class="doc-title rv" style="max-width:22ch;text-transform:none">We simply love design that <span
+          class="serif">works.</span></h1>
     </div>
   </header>
 
