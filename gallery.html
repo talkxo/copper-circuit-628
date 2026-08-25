@@ -17,12 +17,11 @@
   <link rel="stylesheet" href="assets/components.css">
   <style>
     /* brand theme — gallery: tags, dots, and links stay the same TalkXO blue used on the case-studies index.
-       The headline's last word ("works.") stays blue and uppercase like the rest of the
-       title by default, then cycles through a handful of different typefaces — dropping to
-       lowercase only while mid-cycle — as a small attract-effect. */
+       "table." stays plain blue like any other serif accent on the site. Just the word
+       "design" cycles through a handful of different typefaces — dropping to lowercase only
+       while mid-cycle, back to uppercase at rest — as a small attract-effect. */
 
-    .doc-title .serif {
-      color: var(--blue);
+    .doc-title .fx-cycle {
       display: inline-block;
       animation: galleryFontCycle 6s steps(1, end) infinite;
     }
@@ -72,7 +71,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .doc-title .serif {
+      .doc-title .fx-cycle {
         animation: none;
         font-family: var(--sans);
         text-transform: uppercase;
@@ -102,8 +101,8 @@
 
   <header class="doc-header" style="padding-bottom:0">
     <div class="wrap">
-      <h1 class="doc-title rv" style="max-width:22ch">WE JUST LOVE <span class="serif">DESIGN.</span> Design that
-          works.</h1>
+      <h1 class="doc-title rv" style="max-width:22ch">FRESH OFF THE <span class="serif"><span
+            class="fx-cycle">design</span> table.</span></h1>
     </div>
   </header>
 
@@ -196,9 +195,26 @@
           </div>
         </a>
 
-        <a class="folio-card rv" href="reader-stock-portfolio-app.html">
+        <a class="folio-card rv" href="reader-glutamelts.html">
           <div class="fc-frame">
             <div class="fc-num">06</div>
+            <div class="fc-img" style="background-image:url('assets/img/glutamelts/g4_desk.jpg')"
+              oncontextmenu="return false"></div>
+            <div class="fc-shade"></div>
+            <div class="fc-overlay"></div>
+            <div class="fc-plus"></div>
+          </div>
+          <div class="fc-meta">
+            <span class="fc-tag">Packaging design · Nutraceutical</span>
+            <div class="fc-title">The box keeps its own calendar</div>
+            <p class="fc-sub">Packaging for Kaya NUTRA+'s 30-day glutathione sachets, with a day-by-day tracker
+              printed straight onto the carton.</p>
+          </div>
+        </a>
+
+        <a class="folio-card rv" href="reader-stock-portfolio-app.html">
+          <div class="fc-frame">
+            <div class="fc-num">07</div>
             <div class="fc-img" style="background-image:url('assets/img/stockapp/s3_compare.jpg')"
               oncontextmenu="return false"></div>
             <div class="fc-shade"></div>
@@ -215,7 +231,7 @@
 
         <a class="folio-card rv" href="reader-frex-challenge.html">
           <div class="fc-frame">
-            <div class="fc-num">07</div>
+            <div class="fc-num">08</div>
             <div class="fc-img" style="background-image:url('assets/img/frex/x1_hero.jpg')"
               oncontextmenu="return false"></div>
             <div class="fc-shade"></div>
@@ -232,7 +248,7 @@
 
         <a class="folio-card rv" href="reader-flow-club.html">
           <div class="fc-frame">
-            <div class="fc-num">08</div>
+            <div class="fc-num">09</div>
             <div class="fc-img" style="background-image:url('assets/img/flowclub/f1_hero.jpg')"
               oncontextmenu="return false"></div>
             <div class="fc-shade"></div>
