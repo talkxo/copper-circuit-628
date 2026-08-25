@@ -45,10 +45,11 @@ nav.site-nav.scrolled{background:rgba(241,237,228,.88);backdrop-filter:blur(12px
   max-width:1180px;margin:0 auto;padding:18px clamp(20px,4vw,56px);
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;
 }
-/* Whatever sits second-to-last in the nav (nav-links, or a case-menu dropdown when
-   nav-links isn't present) gets pushed flush against the last item — keeps the
-   right-hand cluster grouped together regardless of which page type this is. */
-.nav-in > *:nth-last-child(2){margin-left:auto}
+/* Whatever immediately follows the wordmark gets pushed flush against whatever comes
+   after it (nav-links, or a case-menu dropdown when nav-links isn't present, or nothing
+   at all) — keeps the right-hand cluster grouped together no matter how many items
+   follow, unlike a positional nth-last-child rule which breaks when the item count changes. */
+.wordmark + *{margin-left:auto}
 .wordmark{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
 .wordmark .sq{width:9px;height:9px;background:var(--blue);display:inline-block}
 .wordmark em{font-style:normal;color:var(--ink-40)}
